@@ -1,0 +1,758 @@
+<?php require('./wp/wp-load.php'); ?>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ITスクール NeOS-IT-College</title>
+  <meta name="description" content="NICで「自走力」を養い想いを実現する力を手にしよう！ITサービスの基盤すべてを支える存在がインフラエンジニアです。NICでは実務経験に基づいたカリキュラムとノウハウでサポートします。">
+  <link rel="icon" type="image/x-icon" href="img/lp/logo_NeOS_NIC.png">
+  <meta property="og:url" content="https://nic-neos.jp/lp.html/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ITスクール NeOS-IT-College">
+  <meta property="og:description" content="NICで「自走力」を養い想いを実現する力を手にしよう！ITサービスの基盤すべてを支える存在がインフラエンジニアです。NICでは実務経験に基づいたカリキュラムとノウハウでサポートします。">
+  <meta property="og:site_name" content="NeOS-IT-College">
+  <meta property="og:image" content="https://nic-neos.jp/img/lp/logo_NeOS_NIC.png">
+  <!-- bootstrap 読み込み -->
+  <link rel="stylesheet" href="css/bootstrup/reboot.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="css/bootstrup/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style-lp.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="slick/slick.css" type="text/css">
+  <link rel="stylesheet" href="slick/slick-theme.css" type="text/css">
+  <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script> <!--追加 -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js"></script> -->
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KYYY2WN3H9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KYYY2WN3H9');
+</script>
+  <?php wp_head(); ?> <!--追加 -->
+</head>
+<body>
+  <div class="warp">
+    <header>
+      <!-- ナビバー -->
+        <div class="nav-box container-fluid">
+          <nav class="navbar navbar-expand-lg navbar-light col-12" style="background-color: rgba(255, 255, 255, 0);">
+            <div class="container-fluid" id="nav-container">
+              <a class="navbar-brand"><img src="img/lp/logo_NeOS_NIC.png" alt="プログラミングスクール"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                  <a class="nav-link" aria-current="page" href="#topic">
+                    <img src="img/lp/dotto.png" alt="インフラエンジニア">
+                    インフラエンジニアが求められる3つの理由
+                  </a>
+                  <a class="nav-link" href="#nic-info">
+                    <img src="img/lp/dotto.png" alt="NIC">
+                    NICならできる3つのポイント
+                  </a>
+                  <a class="nav-link" href="#FAQ" tabindex="-1" aria-disabled="true">
+                    <img src="img/lp/dotto.png" alt="質問">
+                    受講前のご質問
+                  </a>
+                </div>
+                <div class="header1 col-md-3">
+                  <div class="btn-box" role="button" aria-label="Basic example" id="top-btn">
+                    <a class="btn btn-lg yureru-j" href="/contact.html" id="nav-btn">
+                      <span>オンライン説明会実施中</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+    </header>
+    <div class="container-fluid" id="top">
+      <div class="top-text-box">
+        <div class="top-text1">
+          <p><span class="marker-2">未経験から</span>でも学べる</p>
+        </div>
+        <div class="top-text2">
+          <p class="pc"><b>NIC</b>で<span class="marker-2">インフラエンジニア</span>になろう!!</p>
+          <p class="sp"><b>NIC</b>で</p>
+          <p class="sp"><span class="marker-2">インフラエンジニア</span>に</p>
+          <p class="sp">なろう!!</p>
+        </div>
+      </div>
+      <div class="top-text-box2">
+        <div class="points col-md-12">
+          <ul>
+            <li class="point1">
+              <img src="img/main/point_icon_sample.png" alt="現役エンジニアが指導">
+              現役エンジニアがマンツーマン指導!!
+            </li>
+            <li class="point2">
+              <img src="img/main/point_icon2.png" alt="対面 オンライン">
+              対面でもオンラインでも選べる!!
+            </li>
+            <li class="point3">
+                <img src="img/main/point_icon3.png" alt="実務に沿ったカリキュラム">
+                実際のプロジェクトに<br class="br-sp">沿ったカリキュラムの実施!!
+            </li>
+          </ul>
+        </div>
+        <div class="tests col-md-5 sp">
+          <div class="test-text" >
+            <p>3日間の無料体験学習実施中!!</p>
+            <a href="/contact.html"></a>
+            <p>いますぐ学ぼう!!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="info-box container-fluid">
+        <div class="info-title text-center">
+          <p>NICのインフラエンジニア研修</p>
+          <p>最短3ヶ月でインフラエンジニアへ</p>
+        </div>
+        <div class="info-item d-flex">
+          <div class="row col-12">
+            <div class="info-a col-md-6">
+              <div class="btn-box1 text-center" role="button" aria-label="Basic example">
+                <a class="btn btn-lg yureru-j" href="/contact.html">無料相談はこちら</a>
+              </div>
+            </div>
+            <div class="info-b col-md-6">
+              <div class="btn-box2 text-center" role="button" aria-label="Basic example">
+                <a class="btn btn-lg yureru-j" href="#">資料請求はこちらから</a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="container text-center" id="trial">
+      <div class="trial-item-box">
+        <div class="trial-title">
+          <p>3日間の無料体験学習実施中</p>
+        </div>
+        <div class="trial-text-box">
+          <p>無料体験学習内容</p>
+          <p>コマンド学習・ネットワーク研修</p>
+        </div>
+        <a href="/contact.html"></a>
+        <div class="trial-text2">
+          <p><span class="trial-text2a">対面</span>でも<span class="trial-text2b">オンライン</span>でも<br class="br-sp">受講が可能です。</p>
+          <p>※詳しくはお問い合わせください。</p>
+        </div>
+      </div>
+    </div>
+    <div class="topic container" id="topic">
+      <div class="topic-title text-center">
+        <h2>いまインフラエンジニアが<br class="br-sp">求められる3つの理由</h2>
+      </div>
+      <div class="reason">
+        <p class="reason-sub">理由1</p>
+        <p class="reason-main"><i class="fas fa-globe fa-lg"></i> ITインフラはすべてのシステムの基盤になる。</p>
+      </div>
+      <div class="reason">
+        <p class="reason-sub">理由2</p>
+        <p class="reason-main"><i class="fas fa-globe fa-lg"></i> インターネットサービスの拡大による需要の増加。</p>
+      </div>
+      <div class="reason">
+        <p class="reason-sub">理由3</p>
+        <p class="reason-main"><i class="fas fa-globe fa-lg"></i> 良質なインターネットサービス提供に不可欠な存在。</p>
+      </div>
+    </div>
+    <div class="info-box container-fluid">
+        <div class="info-title text-center">
+          <p>NICのインフラエンジニア研修</p>
+          <p>最短3ヶ月でインフラエンジニアへ</p>
+        </div>
+        <div class="info-item d-flex justify-content-between">
+          <div class="row col-12">
+            <div class="info-a col-md-6">
+              <div class="btn-box1 text-center" role="button" aria-label="Basic example">
+                <a class="btn btn-lg yureru-j" href="/contact.html">無料相談はこちら</a>
+              </div>
+            </div>
+            <div class="info-b col-md-6">
+              <div class="btn-box2 text-center" role="button" aria-label="Basic example">
+                <a class="btn btn-lg yureru-j" href="#">資料請求はこちらから</a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="curriculum container">
+      <div class="curriculum-title">
+        <h2>カリキュラム内容</h2>
+      </div>
+      <div class="curriculum-box1">
+        <div class="cur-box-title">
+          <h3><span>まずは基礎から!!</span></h3>
+        </div>
+        <div class="cur-box1-text">
+          <p>【基礎演習】</p>
+          <div class="inbox">
+            <p>まずはインフラエンジニアに必要な基礎知識を学習します。</p>
+            <p>演習を問題を通して、コマンドや作業に着手していきます。</p>
+          </div>
+          <p>【内容】</p>
+          <div class="inbox2">
+            <p><span class="marker-3">shell コマンド演習</span>/<span class="marker-3">バッチコマンド演習</span>/<br><span class="marker-3">インフラエンジニアの概要</span>/<span class="marker-3">IT インフラの重要性について</span></p>
+            <span>※一部抜粋</span>
+          </div>
+        </div>
+      </div>
+      <div class="curriculum-box2">
+        <div class="cur-box-title2">
+          <h3><span>実際にサーバを構築!!</span></h3>
+        </div>
+        <div class="cur-box2-text">
+          <p>【Linux構築】</p>
+          <div class="inbox">
+            <p>現場を想定した構築作業を行ないます。</p>
+            <p>作業手順書の作成も行なうで、より実践に近い学習内容です。</p>
+          </div>
+          <p>【内容】</p>
+          <div class="inbox2">
+            <p><span class="marker-3">OS設定</span>/<span class="marker-3">PostgreSQL</span>/<span class="marker-3">NTP</span>/<span class="marker-3">DNS</span>/<br class="br-sp"><span class="marker-3">php</span>/<span class="marker-3">tomcat-apache 連携</span></p>
+            <span>※一部抜粋</span>
+          </div>
+        </div>
+      </div>
+      <div class="curriculum-box2"></div>
+    </div>
+    <div class="nic-info container-fluid" id="nic-info">
+      <div class="nic-info-title text-center">
+        <p>NICならできる3つのポイント</p>
+      </div>
+      <div class="nic-title-text">
+        <p><span>Point.1</span> <br class="br-sp">オンライン受講で仕事や学校と両立が可能‼</p>
+        <p><span>Point.2</span><br class="br-sp"> 未経験からOK!丁寧な指導で挫折させません‼</p>
+        <p><span>Point.3</span><br class="br-sp">「自走力」を養うカリキュラムで自信がつく‼</p>
+      </div>
+      <div class="nic-item container d-flex">
+        <div class="row col-12">
+          <div class="nic-text text-center col-md-6">
+            <div class="nic-text-box">
+              <p>オンライン受講が可能!!</p>
+              <p>仕事や学校と両立が可能</p>
+            </div>
+            <span>オンラインでもプロのエンジニアが徹底サポート!<br>
+                土日の質問も受け付けているので<br>
+                自分のぺースで学習に取り組めます。
+            </span>
+          </div>
+          <div class="nic-img-box col-md-6">
+            <img src="img/lp/lp-img6.jpeg" alt="ITスクール">
+          </div>    
+          <div class="sample_box3_1 text-center">
+            <span class="sample_box_title">Point.1</span>
+            <p>オンラインなので仕事との両立はもちろん</p>
+            <p>遠方の方でも気兼ねなく受講していただけます！</p>
+            <p>現役のエンジニアが土日も質問対応行なっています。</p>
+            <p>平日なかなか勉強時間がとれない方でも安心！</p>
+          </div>
+          </div>
+      </div>
+      <!-- <div class="info-box container-fluid">
+        <div class="info-title text-center">
+          <p>最短3ヶ月でインフラエンジニアへ</p>
+          <p>NICのインフラエンジニア研修</p>
+        </div>
+        <div class="info-item d-flex">
+          <div class="row col-12">
+            <div class="info-a col-md-6">
+              <div class="btn-box1 text-center" role="button" aria-label="Basic example">
+                <a class="btn btn-lg yureru-j" href="#">無料相談はこちら</a>
+              </div>
+            </div>
+            <div class="info-b col-md-6">
+              <div class="btn-box2 text-center" role="button" aria-label="Basic example">
+                <a class="btn btn-lg yureru-j" href="#">資料請求はこちらから</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <div class="nic-item container d-flex" id="second-nic">
+        <div class="row col-12">
+          <div class="nic-text text-center col-md-6">
+            <div class="nic-text-box">
+              <p>未経験からでもOK!!</p>
+              <p>丁寧な指導で挫折させません!</p>
+            </div>
+            <span>IT経験を問わず、ゼロからの教育を<br class="br-sp">得意としています。<br>
+                卒業生の多くはIT未経験でしたが<br>
+                エンジニアとして活躍中です!
+            </span>
+          </div>
+          <div class="nic-img-box col-md-6">
+            <img src="img/lp/lp-img7.jpg" alt="質問回数制限なし">
+          </div>
+          <div class="sample_box3_1 text-center">
+            <span class="sample_box_title">Point.2</span>
+            <p>現役のエンジニア講師が指導いたします。</p>
+            <p>研修中に調べてもわからないことは</p>
+            <p>どんどん質問してください！</p>
+            <p>このやり取りを通して積極性や</p>
+            <p>聞き取る力を身に付けることができます！</p>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="info-box container-fluid">
+        <div class="info-title text-center">
+          <p>最短3ヶ月でインフラエンジニアへ</p>
+          <p>NICのインフラエンジニア研修</p>
+        </div>
+        <div class="info-item d-flex">
+          <div class="row col-12">
+            <div class="info-a col-md-6">
+              <div class="btn-box1 text-center" role="button" aria-label="Basic example">
+                <a class="btn btn-lg yureru-j" href="#">無料相談はこちら</a>
+              </div>
+            </div>
+            <div class="info-b col-md-6">
+              <div class="btn-box2 text-center" role="button" aria-label="Basic example">
+                <a class="btn btn-lg yureru-j" href="#">資料請求はこちらから</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <div class="nic-item container d-flex">
+        <div class="row col-12">
+          <div class="nic-text text-center col-md-6">
+            <div class="nic-text-box">
+              <p>「自走力」を養うカリキュラム</p>
+              <p>大事な力が身に付く</p>
+            </div>
+            <span>
+                当校の研修ではエンジニアとして<br>
+                欠かせない力「自走力」を養うことで<br>
+                研修修了後のエンジニアとしての<br class="br-sp">活躍を後押しします。<br>
+            </span>
+          </div>
+          <div class="nic-img-box col-md-6">
+            <img src="img/lp/lp-img8.jpeg" alt="自走力">
+          </div>
+          <div class="sample_box3_1 text-center">
+            <span class="sample_box_title">Point.3</span>
+            <p>エンジニアとして欠かせない力</p>
+            <p>「自走力」を重視しています。</p>
+            <p>現場を想定したカリキュラムで</p>
+            <p>「自走力」を養うことができます！</p>
+          </div>
+        </div>
+      </div>
+      <div class="info-box container-fluid">
+        <div class="info-title text-center">
+          <p>NICのインフラエンジニア研修</p>
+          <p>最短3ヶ月でインフラエンジニアへ</p>
+        </div>
+        <div class="info-item d-flex">
+          <div class="row col-12">
+            <div class="info-a col-md-6">
+              <div class="btn-box1 text-center" role="button" aria-label="Basic example">
+                <a class="btn btn-lg yureru-j" href="/contact.html">無料相談はこちら</a>
+              </div>
+            </div>
+            <div class="info-b col-md-6">
+              <div class="btn-box2 text-center" role="button" aria-label="Basic example">
+                <a class="btn btn-lg yureru-j" href="#">資料請求はこちらから</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="attention container-fluid" id="attent">
+      <div class="attention-title text-center">
+        <h2>2021年度エンジニア転向率<span class="at-title">100％</span></h2>
+      </div>
+      <div class="ateention-text-box text-center">
+        <p>ほとんどが完全未経験！年齢・業種も様々!!</p>
+      </div>
+      <!-- <div class="balloon4">
+        <p>例えばこんな人が…</p>
+      </div> -->
+      <div class="voice d-flex">
+        <div class="row col-12 justify-content-around">
+          <div class="voice-box col-md-3">
+            <span class="voice-box-title">元工場勤務 31歳</span>
+            <div class="at-img text-center">
+              <img src="img/main/member_o.jpg" alt="">
+            </div>
+            <div class="at-text-box">
+              <div class="at-text-1">
+                <h5>私の想い</h5>
+                <p>自分で便利なアプリ作ってみたい！</p>
+              </div>
+              <div class="at-text-2">
+                <h5>研修の感想</h5>
+                <p>率直に言うとNICの研修を受講して</p>
+                <p>本当に良かったと実感しています！</p>
+                <p>長年現場経験のある方が講師だったので</p>
+                <p>とてもわかりやすく知識やスキルを</p>
+                <p>教えていただきました！</p>
+              </div>
+            </div>
+          </div>
+          <div class="voice-box col-md-3">
+            <span class="voice-box-title">元自動車ディーラー 26歳</span>
+            <div class="at-img text-center">
+              <img src="img/main/member_s.jpg" alt="">
+            </div>
+            <div class="at-text-box">
+              <div class="at-text-1">
+                <h5>私の想い</h5>
+                <p>成長するVR技術に関わる仕事がしたい！</p>
+              </div>
+              <div class="at-text-2">
+                <h5>研修の感想</h5>
+                <p>講師からは現場の実務で大事な力になる</p>
+                <p>「調べ方」「聞き方」を学びました。</p>
+                <p>研修でスキル以外にのこういった力を</p>
+                <p>つけることができたので、エンジニア</p>
+                <p>としての実務にすごく助かっています。</p>
+              </div>
+            </div>
+          </div>
+          <div class="voice-box col-md-3">
+            <span class="voice-box-title">元小学校教員 34歳</span>
+            <div class="at-img text-center">
+              <img src="img/main/member_ms.jpg" alt="プログラミングスクール">
+            </div>
+            <div class="at-text-box">
+              <div class="at-text-1">
+                <h5>私の想い</h5>
+                <p>子供たちにIT技術を教えたい！</p>
+              </div>
+              <div class="at-text-2">
+                <h5>研修の感想</h5>
+                <p>講師とトライアンドエラーを繰り返し、</p>
+                <p>課題に向き合いました。実施に基づいた</p>
+                <p>長年現場経験のある方が講師だったので</p>
+                <p>課題を行なったことで、とても充実した</p>
+                <p>時間を過ごせました。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ateention-text-box-2 text-center">
+        <p class="marker-1">みなさんそれぞれの想いを胸に</p>
+        <p class="marker-1">エンジニア転向を叶えています!!</p>
+      </div>
+    </div>
+    <div class="container text-center" id="trial">
+      <div class="trial-item-box">
+        <div class="trial-title">
+          <p>3日間の無料体験学習実施中</p>
+        </div>
+        <div class="trial-text-box">
+          <p>無料体験学習内容</p>
+          <p>コマンド学習・ネットワーク研修</p>
+        </div>
+        <a href="/contact.html"></a>
+        <div class="trial-text2">
+          <p><span class="trial-text2a">対面</span>でも<span class="trial-text2b">オンライン</span>でも<br class="br-sp">受講が可能です。</p>
+          <p>※詳しくはお問い合わせください。</p>
+        </div>
+      </div>
+    </div>
+    <div class="container fadeIn" id="FAQ">
+        <div class="FAQ-title text-center">
+          <h2>Q&A</h2>
+        </div>
+        <div class="accordion" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn-2 btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Q.未経験からでも大丈夫ですか？ ▼
+                </button>
+              </h5>
+            </div>
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>A.はい、全く問題ございません。</p>
+                <p>&emsp;IT経験を問わず、ゼロからのエンジニア教育を得意としており、</p>
+                <p>&emsp;当校カリキュラムを卒業をした未経験メンバーもエンジニアとして多数活躍中です。</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h5 class="mb-0">
+                <button class="btn-2 btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Q.経験者でも大丈夫ですか？ ▼
+                </button>
+              </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>A.大丈夫です。経験者の方に合わせたカリキュラムの用意がございます。</p>
+                <p>&emsp;大手ITスクール卒業生なども多数受講しています。</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h5 class="mb-0">
+                <button class="btn-2 btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Q.研修期間はどのくらい？ ▼
+                </button>
+              </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>A.3ヶ月～６ヶ月の間でのプランをご用意しております。</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingSix">
+              <h5 class="mb-0">
+                <button class="btn-2 btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                  Q.講義スタイルは？ ▼
+                </button>
+              </h5>
+            </div>
+            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>A.自走力を養うことを目的としている為、自習するスタイルで行っております。</p>
+                <p>&emsp;オンライン、オフラインともに講師がいますので、いつでも質問できます。</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingFour">
+              <h5 class="mb-0">
+                <button class="btn-2 btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  Q.必要なPCのスペックは？ ▼
+                </button>
+              </h5>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>A.当校で使用しているPCのスペックは</p>
+                <p>（CPUコアI5）相当メモリ8GB、HDD256程度</p>
+                <p>&emsp;ですので同等のスペックであれば問題ございません。</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingSeven">
+              <h5 class="mb-0">
+                <button class="btn-2 btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                  Q.質問回数に上限はありますか？ ▼
+                </button>
+              </h5>
+            </div>
+            <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>A.特にございません。いくらでもご質問いただけます。</p>
+                <p>&emsp;さらに現場で通用する質問ができるように教育を行なっております。</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingEight">
+              <h5 class="mb-0">
+                <button class="btn-2 btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                  Q.受講開始までの流れは？ ▼
+                </button>
+              </h5>
+            </div>
+            <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>A.お問い合わせ → 面談 → 申し込み → 契約 → 受講開始 となっております。</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingFive">
+              <h5 class="mb-0">
+                <button class="btn-2 btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  Q.対面での講義はできる？▼
+                </button>
+              </h5>
+            </div>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>A.はい、対面での受講も可能です。</p>
+                <p>※現在は感染症対策として、フルリモートでの対応となっております。</p> 
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingNine">
+              <h5 class="mb-0">
+                <button class="btn-2 btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                  Q.対象の地域は？ ▼
+                </button>
+              </h5>
+            </div>
+            <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>A.全国で受講いただけます。</p>
+                <p>フルリモートでの受講が可能です。</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingEleven">
+              <h5 class="mb-0">
+                <button class="btn-2 btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                  Q.卒業後の進路はどのようになりますか？▼
+                </button>
+              </h5>
+            </div>
+            <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>A.卒業後の進路は下記の3つがご案内できます。</p>
+                <p>1.弊社社員としての雇用</p>
+                <p>2.ITインフラ企業への転職</p>
+                <p>3.フリーランスとして案件のご紹介</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTen">
+              <h5 class="mb-0">
+                <button class="btn-2 btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                  Q.返金制度はありますか？ ▼
+                </button>
+              </h5>
+            </div>
+            <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>A.契約日から8日以内であれば受講料の全額返金をいたします。</p>
+                <p>※返金手数料はご負担いただきます。</p>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="card">
+            <div class="card-header" id="headingFive">
+              <h5 class="mb-0">
+                <button class="btn-2 btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  Q.パソコンのレンタルは可能ですか？
+                </button>
+              </h5>
+            </div>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>A.はい、保証金ありでレンタル可能（7,800円/月）です</p> 
+              </div>
+            </div>
+          </div> -->
+        </div>
+        </div>
+      </div>
+      <div class="info-box container-fluid">
+        <div class="info-title text-center">
+          <p>NICのインフラエンジニア研修</p>
+          <p>最短3ヶ月でインフラエンジニアへ</p>
+        </div>
+        <div class="info-item d-flex">
+          <div class="row col-12">
+            <div class="info-a col-md-6">
+              <div class="btn-box1 text-center" role="button" aria-label="Basic example">
+                <a class="btn btn-lg yureru-j" href="/contact.html">無料相談はこちら</a>
+              </div>
+            </div>
+            <div class="info-b col-md-6">
+              <div class="btn-box2 text-center" role="button" aria-label="Basic example">
+                <a class="btn btn-lg yureru-j" href="#">資料請求はこちらから</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <footer>
+    <div class="container-fluid d-flex justify-content-between" id="f-items">
+      <div class="footer-nav">
+        <div class="f-title">
+          <a href="#">
+            <img src="./img/lp/logo_NeOS_NIC.png" alt="">
+          </a> 
+        </div>
+      </div>
+      <div class="f-info text-left">
+        <ul class="f-info-1">
+          <li><a href="https://ne-os.jp/">運営会社：株式会社NeOS</a></li>
+          <li>NIC NeOS IT College</li>
+          
+        <!-- <ul class="f-info-3">
+          <li>住所</li>
+          <li>東京都文京区白山1-26-17</li>
+          <li> フィル・パーク白山ヒルズ6F</li>
+        </ul>
+        <ul class="f-info-4">
+          <li>電話番号</li>
+          <li>TEL: 03-0000-0000</li>
+        </ul> -->
+          
+        </ul>
+        <ul class="f-info-1">
+          <li><a href="private2.html">プライバシーポリシー</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+    <!-- jquery読み込み -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <!-- bootstrap js読み込み -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="slick/slick.js"></script>
+    <script type="text/javascript" src="js/slick_index.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".navbar-nav a").click(function(event) {
+        $(".navbar-collapse").collapse('hide');
+        });
+      });
+    </script>
+    <script>
+      $(function() {
+        var headerHeight = 80;//固定ヘッダーの高さを入れる
+        $('[href^="#"]').click(function(){
+          var href= $(this).attr("href");
+          var target = $(href == "#" || href == "" ? 'html' : href);
+          var position = target.offset().top-headerHeight; 
+          $("html, body").animate({scrollTop:position}, 200, "swing");//200はスクロールの移動スピードです
+          return false;
+        });
+      });
+    </script>
+    <!-- <script>
+      lazyload();
+    </script> -->
+    <script>
+      let contents = document.querySelectorAll('.fadeIn');
+      let windowIn = window.innerHeight;
+      let nowPosition;
+      let myClassName = 'scrollin';
+      for (var i = 0; contents.length > i; i++) {
+        let content = contents[i];
+        let contentPosition = content.getBoundingClientRect().top;
+        window.addEventListener('scroll', function () {
+          nowPosition = window.pageYOffset;
+          if (content.classList.contains(myClassName) === false) {
+            if (windowIn + nowPosition > contentPosition + (windowIn / 5)) {
+              content.classList.add(myClassName);
+            }
+          }
+        },false)
+      }
+    </script>
+   <!--追加 -->
+</div>
+<?php wp_footer(); ?>
+</body>
+</html>

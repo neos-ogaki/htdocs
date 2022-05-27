@@ -1,0 +1,42 @@
+
+
+
+白縁
+.a {
+text-shadow: 0px 0px 0px white,
+-0px 0px 0px white,
+0px -0px 0px white,
+-0px -0px 0px white;
+}
+
+黒縁
+.a {
+text-shadow: 0px 0px 0px white,
+-0px 0px 0px white,
+0px -0px 0px white,
+-0px -0px 0px white;
+}
+
+.a {
+    text-shadow: 3px 3px 3px white,
+                -3px -3px 3px white, 
+                -3px 3px 3px white,
+                3px -3px 3px white,
+                3px 0px 3px white,
+                -3px 0px 3px white,
+                0px 3px 3px white,
+                0px -3px 3px white;
+}
+
+
+.a {
+    text-shadow:
+            1px 1px 1px #ff4800, -1px -1px 1px #ff4800,
+           -1px 1px 1px #ff4800,  1px -1px 1px #ff4800,
+            1px 0px 1px #ff4800, -1px -0px 1px #ff4800,
+            0px 1px 1px #ff4800,  0px -1px 1px #ff4800;
+}
+
+
+
+

@@ -1,0 +1,148 @@
+<?php require('./wp/wp-load.php'); ?>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>予約フォーム NeOS-IT-College</title>
+  <link rel="icon" type="image/x-icon" href="img/lp/logo_NeOS_NIC.png">
+  <!-- bootstrap 読み込み -->
+  <link rel="stylesheet" href="css/bootstrup/reboot.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="css/bootstrup/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style-reserve.css" type="text/css" media="screen">
+  <!-- <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js"></script> -->
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <?php wp_head(); ?> <!--追加 -->
+</head>
+<body>
+  <div class="wrap">
+    <?php session_start();
+    $username = $_SESSION['name'];
+      if (isset($_SESSION['id'])) {//ログインしているとき
+        $msg = 'こんにちは' . htmlspecialchars($username, \ENT_QUOTES, 'UTF-8') . 'さん';
+        $link = '<a href="logout.php">ログアウト</a>';
+    } else {//ログインしていない時
+        $msg = 'ログインしていません';
+        $link = '<a href="login.php">ログイン</a>';
+    ?>
+  <h1><?php echo $msg; ?></h1>
+  <?php echo $link; ?>
+  <!-- ヘッダー -->
+  <!-- <header>
+  
+    <div class="nav-box container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light col-12" style="background-color: rgba(255, 255, 255, 0.897);">
+        <div class="container-fluid" id="nav-container">
+          <a class="navbar-brand" href="#"><img src="img/main/main-logo.png" alt="プログラミングスクール"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" aria-current="page" href="#list">初めての方へ</a>
+              <a class="nav-link" href="#content-2">カリキュラム</a>
+              <a class="nav-link" href="#content-3">受講生の声</a>
+              <a class="nav-link" href="#content-4">料金・コース</a>
+              <a class="nav-link" href="#FAQ">Q&A</a>
+              <a class="nav-link" href="#box-1">講義風景</a>
+              <a class="nav-link" href="#access" tabindex="-1" aria-disabled="true">アクセス</a>
+            </div>
+            <div class="header1 col-md-2">
+              <div class="btn-box" role="button" aria-label="Basic example">
+                <a class="btn btn-lg" href="/contact-hp.html" id="nav-btn">
+                  <p>無料相談はこちら<i class="far fa-envelope fa-lg"></i></p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header> -->
+  <!-- トップ -->
+  <div class="title">
+      <h2>教室座席予約</h2>
+  </div>
+  <h1><?php echo $msg; ?></h1>
+      <?php echo $link; ?>
+  <div class="top-carender">
+    <!-- <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FTokyo&showTitle=0&src=YWk3bGp2M2g3N2xtamtscGNkM2FiN2d0c2tAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=amEuamFwYW5lc2UjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23616161&color=%230B8043" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe> -->
+    <?php echo do_shortcode('[monthly_calendar id="60"]'); ?>
+  </div>
+  <div class="text-box">
+    <div class="content-1">
+      <h3>注意事項</h3>
+    </div>
+    <div class="content-2">
+      <h4>1.予約可能時間</h4>
+      <p>第1部:10時～13時 3h</p>
+      <p>第2部:13時～16時 3h</p>
+      <p>第3部:16時～19時 3h</p>
+      <p>第4部:19時～22時 4h</p>
+      <p>※赤字で表示されている時間は満席となっております。</p>
+    </div>
+    <div class="content-3">
+      <h4>2.キャンセルについて</h4>
+      <p>キャンセルはメール又は、slackでご連絡ください</p>
+      <p>キャンセルはの場合は原則30分前までに行なってください。</p>
+    </div>
+  </div>
+  <!-- <footer>
+    <div class="container-fluid d-flex justify-content-between" id="f-items">
+      <div class="footer-nav">
+        <div class="f-title text-center">
+          <a href="#">
+            <h2>NIC</h2>
+            <h3>~NeOS IT College~</h3>
+          </a> 
+        </div>
+      </div>
+      <div class="f-info d-flex text-left">
+        <ul class="f-info-1">
+          <li><a href="https://ne-os.jp/">運営会社：株式会社NeOS</a></li>
+          <li><a href="https://silver---back.jp/">SILBER BACK GYM</a></li>
+          <li>NIC NeOS IT College</li> -->
+        <!-- <ul class="f-info-3">
+          <li>住所</li>
+          <li>東京都文京区白山1-26-17</li>
+          <li> フィル・パーク白山ヒルズ6F</li>
+        </ul>
+        <ul class="f-info-4">
+          <li>電話番号</li>
+          <li>TEL: 03-0000-0000</li>
+        </ul> -->
+          <!-- <li><a href="private2.html">プライバシーポリシー</a></li>
+        </ul>
+      </div>
+    </div>
+   </footer> -->
+    <!-- jquery読み込み -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <!-- bootstrap js読み込み -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".navbar-nav a").click(function(event) {
+        $(".navbar-collapse").collapse('hide');
+        });
+      });
+    </script>
+    <script>
+      $(function() {
+        var headerHeight = 80;//固定ヘッダーの高さを入れる
+        $('[href^="#"]').click(function(){
+          var href= $(this).attr("href");
+          var target = $(href == "#" || href == "" ? 'html' : href);
+          var position = target.offset().top-headerHeight; 
+          $("html, body").animate({scrollTop:position}, 200, "swing");//200はスクロールの移動スピードです
+          return false;
+        });
+      });
+    </script>
+</div>
+<?php wp_footer(); ?>
+</body>
+</html>

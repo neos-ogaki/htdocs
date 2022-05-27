@@ -1,0 +1,873 @@
+<?php require('./wp/wp-load.php'); ?>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ITスクール NeOS-IT-College</title>
+  <link rel="icon" type="image/x-icon" href="img/main/Education.png">
+  <!-- bootstrap 読み込み -->
+  <link rel="stylesheet" href="css/bootstrup/reboot.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="css/bootstrup/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="slick/slick.css" type="text/css">
+  <link rel="stylesheet" href="slick/slick-theme.css" type="text/css">
+  <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script> <!--追加 -->
+  <?php wp_head(); ?> <!--追加 -->
+</head>
+<body>
+  <div class="wrap">
+  <!-- ヘッダー -->
+  <header>
+  <!-- ナビバー -->
+    <div class="nav-box container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light col-12" style="background-color: rgba(255, 255, 255, 0.897);">
+        <div class="container-fluid" id="nav-container">
+          <a class="navbar-brand" href="#"><img src="img/main/Education.png" alt="プログラミングスクール"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" aria-current="page" href="#list">初めての方へ</a>
+              <a class="nav-link" href="#content-2">カリキュラム</a>
+              <a class="nav-link" href="#content-3">受講生の声</a>
+              <a class="nav-link" href="#content-4">料金・コース</a>
+              <a class="nav-link" href="#FAQ">Q&A</a>
+              <a class="nav-link" href="#foto">教室風景</a>
+              <a class="nav-link" href="#access" tabindex="-1" aria-disabled="true">アクセス</a>
+            </div>
+            <div class="header1 col-md-2">
+              <div class="btn-box" role="button" aria-label="Basic example">
+                <a class="btn btn-lg" href="#contact-info" id="nav-btn">
+                  <p>無料相談はこちら<i class="far fa-envelope fa-lg"></i></p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- トップ -->
+  <div class="container-fluid text-center mb-3" id="top">
+    <div id="carouselExampleIndicators" class="carousel slide" data-interval=5000 data-ride="false">
+      <!-- <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol> -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/main/top_main_01-min.png" class="d-block w-100" width="100%" height="800" alt="IT"> 
+        </div>
+        <div class="carousel-item">
+          <img src="img/main/top-sample-15-min.png" class="d-block w-100" width="100" height="700" alt="おすすめ">
+        </div>
+        <div class="carousel-item">
+          <img src="img/main/top-sample-15-min.png" class="d-block w-100" width="100" height="700" alt="社会人">
+        </div>
+      </div>
+        <!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a> -->
+    </div>
+    <div class="container" id="top-second">
+      <div class="row d-flex justify-content-center fadeIn">
+        <div class="second-item-1 col-11 col-md-12">
+          <p>IT ×「あなたの想い」を実現しよう！</p>
+        </div>
+        <div class="second-item-img col-11 col-md-4">
+          <img src="img/main/DSC_4737-min.jpeg" width="100%" alt="30代">
+        </div>
+        <div class="second-item-2 col-11 col-md-8">
+          <ul class="text-left">
+            <li><p>・<span class="marker1">こんなITサービスがあれば便利なのに・・・</span></p></li>
+            <li><p>・<span class="marker1">身近な人をITサービスで助けたい！</span></p></li>
+            <li><p>・<span class="marker1">仕事のノウハウとITの力で社会にインパクトを与えたい！</span></p></li>
+          </ul>
+        </div>
+      </div>
+      <div class="top-second-text text-center fadeIn">
+        <div class="tst-box text-center">
+          <p>NICで<span>「自走力」</span>を養い<br class="br-sp"><span>想いを実現する力</span>を手にしよう！</p>
+          <p>このようなITサービスの基盤すべてを<br class="br-sp">支える存在がインフラエンジニアです。</p>
+          <p>NICでは実務経験に基づいた<br class="br-sp">カリキュラムとノウハウでサポートします。</p>
+          <p>その想い、<span>自らの手で実現</span>しましょう！</p>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid fadeIn" id="top-items">
+      <div class="row justify-content-center">
+        <div class="t-item col-11 col-lg-4">
+          <a href="#list-item-1" class="btn-a btn-gradient">
+            <b><p>未経験からのエンジニア</p>
+            <p>転向率１００％ <i class="fas fa-arrow-circle-right fa-lg"></i></p></b>
+          </a>
+          <!-- <a href="#list-item-1" id="list-item-effect">
+            <b><p>未経験からのエンジニア</p>
+            <p>転向率１００％</p></b>
+          </a> -->
+        </div>
+        <div class="t-item col-11 col-lg-4">
+          <a href="#list-item-2" class="btn-a btn-gradient">
+            <b><p>マンツーマン指導で</p>
+            <p>学べる！！ <i class="fas fa-arrow-circle-right fa-lg"></i></p></b>
+          </a>
+          <!-- <a href="#list-item-2" id="list-item-effect">
+            <b><p>マンツーマン指導で</p>
+            <p>学べる！！</p></b>
+          </a> -->
+        </div>
+        <div class="t-item col-11 col-lg-4">
+          <a href="#list-item-3" class="btn-a btn-gradient">
+            <b><p>エンジニア業界を学べる</p>
+            <p>カリキュラム <i class="fas fa-arrow-circle-right fa-lg"></i></p></b>
+          </a>
+          <!-- <a href="#list-item-3" id="list-item-effect">
+            <b><p>エンジニア業界を学べる</p>
+            <p>カリキュラム</p></b>
+          </a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- -----------------topic-------------------- -->
+  <div class="container-fluid text-center fadeIn" id="topic">
+    <div class="topic-wrap">
+      <div class="topic-title text-center">
+        <h3>新型コロナ禍におけるNICとしてできること</h3>
+        <p>新型コロナの影響で退学もしくは、失業した方を対象に、</p>
+        <p>本カリキュラムを無料で学習いただけます。</p>
+      </div>
+      <div class="topic-text text-left">
+        <p>条件：①レポート（各項目400字以上）</p>
+        <p>&emsp;&emsp;&emsp;退職もしくは退学の経緯・自己紹介・動機（何故ITの道に進みたいのか）・アピール</p>
+        <p>&emsp;&emsp;&emsp;②離職票、退学証明書の提示</p>
+      </div>
+      <div class="topic-text2 text-center">
+        <p>新型コロナウイルスの感染拡大により、甚大な影響を受けている方へ</p>
+        <p>弊社としてなにかできないかと考えた結果、無償で本カリキュラムを提供することを決定いたしました。</p>
+        <p>ご希望の方は上記の条件のもと審査をさせていただきます。</p>
+        <p>詳細についてはお気軽に下記お問い合わせフォームよりご連絡ください。</p>
+        <p>※定員を設けさせていただいておりますので、お問い合わせください。</p>
+      </div>
+    </div>
+  </div>
+  <!-- ------------------コンテンツ--------------- -->
+    <div class="container-fluid text-center" id="content-1">
+      <div class="img-box fadeIn">
+        <img src="img/main/server_1-min.jpeg" width="75%" height="250" alt="サーバールーム">
+        <h2 class="c1-title">サーバー構築・運用特化型スクール</h2>
+      </div>
+      <div class="c1-text text-center fadeIn">
+        <h3>インフラエンジニアは何故求められるのか</h3>
+        <div class="c1-text-item text-left">
+          <p> 1.ITインフラはすべてのシステムの基盤になる。</p>
+          <p> 2.ITインフラの土台となるため仕事がなくならず、不況に強い。</p>
+          <p> 3.良質なWEBサービス提供に不可欠な存在。</p>
+          <p> 4.インターネットサービスの増加による需要の増加。</p>
+        </div>
+      </div>
+    </div>
+    <div class="btn-box text-center" role="button" aria-label="Basic example">
+      <a class="btn btn-lg" href="#contact-info">無 料 相 談 は こ ち ら  <i class="far fa-envelope fa-lg"></i></a>
+    </div>
+  <!-- メリット -->
+    <div class="container-fluid mb-5" id="list">
+      <div class="row d-flex justify-content-center fadeIn" id="list-item-1">
+        <div class="list-text col-md-6 order-md-2">
+          <h3>未経験からのエンジニア転向率１００％</h3>
+          <p>現在弊社教育カリキュラムを<span class="marker2">卒業した100%がエンジニア</span>として活躍しています！</p>
+          <p>また、エンジニアとして重要な<span class="marker2">「自走力」</span>を身につけることができ、</p>
+          <p>スタートから<span class="marker2">周囲と差をつける</span>ことが可能なカリキュラムとなっています！</p>
+        </div>
+        <div class="list-img-l col-md-4 order-md-1">
+          <img src="img/main/DSC_4603-min.jpeg" width="100%" alt="メリット">
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center fadeIn" id="list-item-2">
+        <div class="list-text col-md-6">
+          <h3>マンツーマン指導で学べる！！</h3>
+          <p>現役エンジニアによる<span class="marker2">個別指導</span>あり！</p>
+          <p>気兼ねなく質問出来る環境で時間を無駄にすることなく学習出来ます。</p>
+          <p>積極性や聞き取る力など仕事に必要な<span class="marker2">コミュニケーション力</span>が身につきます。</p>
+          <p>また、新型コロナ感染症対策といたしまして、<span class="marker2">オンライン指導</span>も実施しております。</p>
+        </div>
+        <div class="list-img-r col-md-4">
+          <img src="img/main/DSC_4669-min.jpeg"  width="100%" alt="転職">
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center fadeIn" id="list-item-3">
+        <div class="list-text col-md-6 order-md-2">
+          <h3>エンジニア業界を学べるカリキュラム</h3>
+          <p><span class="marker2">実際の現場を想定</span>した研修カリキュラムを通し、実務との差を埋めることができます。</p>
+          <p>採用面談等のアドバイス、ビジネスマナー等の教育も徹底しております。</p>
+          <p><span class="marker2">未経験者の不安を極力解消し、安心できるスタート</span>をサポートいたします。</p>
+        </div>
+        <div class="list-img-l col-md-4 order-md-1">
+          <img src="img/main/list1-min.jpeg" width="100%" alt="フリーランス">
+        </div>
+      </div>
+    </div>
+  <!-- コンテンツ -->
+  <div class="container-fluid" id="content-2">
+    <div class="c2-title text-center mb-3 fadeIn">
+      <h2><b><span>NIC</span></b>ならできる<b><span>6</span></b>つのこと</h2>
+    </div>
+    <div class="row d-flex justify-content-center mb-3 fadeIn">
+      <div class="c2-item col-6 col-md-4 text-center mb-2">
+        <div class="c2-icon">
+          <img src="img/main/icon-1.png" width="40%" alt="アイコン">
+        </div>
+        <div class="c2-text">
+          <h6><span>1.</span>実務経験に基づいたカリキュラム</h6>
+          <p>現場を想定した動きや考え方が学べ、</p>
+          <p>実務との差を埋めることができます。</p>
+        </div>
+      </div>
+      <div class="c2-item col-6 col-md-4 text-center mb-2">
+        <div class="c2-icon">
+          <img src="img/main/icon-2.png" width="40%" alt="アイコン">
+        </div>
+        <div class="c2-text">
+          <h6><span>2.</span>エンジニアとしてのベースを構築</h6>
+          <p>カリキュラムを通じて現場で通用する聞き方</p>
+          <p>調べ方などの教育も徹底しております。</p>
+        </div>
+      </div>
+      <div class="c2-item col-6 col-md-4 text-center mb-2">
+        <div class="c2-icon">
+          <img src="img/main/icon-3.png" width="40%" alt="アイコン">
+        </div>
+        <div class="c2-text">
+          <h6><span>3.</span>対面orオンラインを都度選択可能</h6>
+          <p>自身の環境に合わせ、対面orオンラインを</p>
+          <p>リアルタイムでご選択いただけます。</p>
+        </div>
+      </div>
+      <div class="c2-item col-6 col-md-4 text-center mb-2">
+        <div class="c2-icon">
+          <img src="img/main/icon-4.png" width="40%" alt="アイコン">
+        </div>
+        <div class="c2-text">
+          <h6><span>4.</span>現役エンジニアの個別指導</h6>
+          <p>これまでの経験を踏まえ、わかりやすい、</p>
+          <p>丁寧な指導で学習を挫折させません。</p>
+        </div>
+      </div>
+      <div class="c2-item col-6 col-md-4  text-center mb-2">
+        <div class="c2-icon">
+          <img src="img/main/icon-5.png" width="40%" alt="アイコン">
+        </div>
+        <div class="c2-text">
+          <h6><span>5.</span>エンジニア転向率100%の実績</h6>
+          <p>カリキュラムを卒業後、プロのエンジニア</p>
+          <p>として日々活躍しております！</p>
+        </div>
+      </div>
+      <div class="c2-item col-6 col-md-4 text-center mb-2">
+        <div class="c2-icon">
+          <img src="img/main/icon-6.png" width="40%" alt="アイコン">
+        </div>
+        <div class="c2-text">
+          <h6><span>6.</span>インフラ特化型カリキュラム</h6>
+          <p>未経験の方から経験者の方まで学べる</p>
+          <p>カリキュラムをご用意しております。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="btn-box text-center" role="button" aria-label="Basic example">
+    <a class="btn btn-lg" href="#contact-info">無 料 相 談 は こ ち ら  <i class="far fa-envelope fa-lg"></i></a>
+  </div>
+  <!-- ---------------------content-3------------------------------------------------ -->
+  <div class="container mb-5" id="content-3">
+    <div class="c3-title text-center mb-3">
+      <h2>― 受講生の声 ―</h2>
+    </div>
+    <div class="row d-flex justify-content-center fadeIn">
+      <div class="slick-slider1 container-fluid">
+        <div class="c3-item" id="c3-item-1">
+          <div class="c3-img">
+            <img src="img/main/member_n.jpg" width="100%" alt="">
+          </div>
+          <div class="c3-text">
+            <input id="trigger1" class="grad-trigger" type="checkbox">
+            <label class="grad-btn" for="trigger1"></label>
+            <div class="grad-item">
+              未経験からの研修で不安しかなかったですが、
+              講師の方が丁寧に分かるまで対応して下さり最後までやりきることが出来ました。
+              PCのこともよく分からなかった自分が構築を出来た時は達成感がありました。
+              中でもLinuxのコマンドは研修で何度も練習したので、
+              現場でスムーズに使うことができました。
+              おかげで他の方より早く次の作業へ移れました。
+            </div>
+          </div>
+        </div>
+        <div class="c3-item" id="c3-item-3">
+          <div class="c3-img">
+            <img src="img/main/member_s.jpg" width="100%" alt="">
+          </div>
+          <div class="c3-text">
+            <input id="trigger3" class="grad-trigger-2" type="checkbox">
+            <label class="grad-btn-2" for="trigger3"></label>
+            <div class="grad-item-2">
+              ■研修で学んだこと
+              研修ではITインフラがどのような業種、業界なのかという基礎的な知識から、
+              ITインフラ業界で幅広く使用されているLinuxの使用方法、構築方法について学びました。
+              <br>■現場で学んだ事
+                現場に活かせたことはわからないことへの対応の仕方です。
+                基本的なことかもしれませんが、研修ではわからないことはまず調べる。
+                それでもわからない場合は先輩スタッフに相談できる環境でした。
+                現場では研修以上にわからないことが多い為、
+                研修の環境のおかげでわからないことへの対応がスムーズに行えていると思いました。
+              </br>
+            </div>
+          </div>
+        </div>
+        <div class="c3-item" id="c3-item-2">
+          <div class="c3-img">
+            <img src="img/main/member_o.jpg" width="100%" alt="">
+          </div>
+          <div class="c3-text">
+            <input id="trigger2" class="grad-trigger-1" type="checkbox">
+            <label class="grad-btn-1" for="trigger2"></label>
+            <div class="grad-item-1">
+              完全未経験で研修をスタートしました。
+              研修を通して一番成長できたと思うことは「自走力」でした。
+              講師の方とのやり取りを通して、効果的な質問の仕方や、「わからない」
+              に対しての問題解決の仕方などを繰り返すことで自走力を養うことができたと感じました。
+              また、業界の基礎的な知識や、Linuxを中心にインフラエンジニアとしての知識を学びました。
+              将来インフラエンジにとして活躍する為に知識以外の必要な力も身に付きました。
+            </div>
+          </div>
+        </div>
+        <!-- <div class="c3-item" id="c3-item-1">
+          <div class="c3-img">
+            <img src="img/main/xxx-img.jpg" width="100%" alt="">
+          </div>
+          <div class="c3-text">
+            <input id="trigger1" class="grad-trigger" type="checkbox">
+            <label class="grad-btn" for="trigger1"></label>
+            <div class="grad-item">
+              未経験からの研修で不安しかなかったですが、
+              講師の方が丁寧に分かるまで対応して下さり最後までやりきることが出来ました。
+              PCのこともよく分からなかった自分が構築を出来た時は達成感がありました。
+              中でもLinuxのコマンドは研修で何度も練習したので、
+              現場でスムーズに使うことができました。
+              おかげで他の方より早く次の作業へ移れました。
+            </div>
+          </div>
+        </div>
+        <div class="c3-item" id="c3-item-3">
+          <div class="c3-img">
+            <img src="img/main/xxx_202105.jpg" width="100%" alt="">
+          </div>
+          <div class="c3-text">
+            <input id="trigger3" class="grad-trigger-2" type="checkbox">
+            <label class="grad-btn-2" for="trigger3"></label>
+            <div class="grad-item-2">
+              ■研修で学んだこと
+              研修ではITインフラがどのような業種、業界なのかという基礎的な知識から、
+              ITインフラ業界で幅広く使用されているLinuxの使用方法、構築方法について学びました。
+              <br>■現場で学んだ事
+                現場に活かせたことはわからないことへの対応の仕方です。
+                基本的なことかもしれませんが、研修ではわからないことはまず調べる。
+                それでもわからない場合は先輩スタッフに相談できる環境でした。
+                現場では研修以上にわからないことが多い為、
+                研修の環境のおかげでわからないことへの対応がスムーズに行えていると思いました。
+              </br>
+            </div>
+          </div>
+        </div>
+        <div class="c3-item" id="c3-item-2">
+          <div class="c3-img">
+            <img src="img/main/xxx_sample2.jpg" width="100%" alt="">
+          </div>
+          <div class="c3-text">
+            <input id="trigger2" class="grad-trigger-1" type="checkbox">
+            <label class="grad-btn-1" for="trigger2"></label>
+            <div class="grad-item-1">
+              完全未経験で研修をスタートしました。
+              研修を通して一番成長できたと思うことは「自走力」でした。
+              講師の方とのやり取りを通して、効果的な質問の仕方や、「わからない」
+              に対しての問題解決の仕方などを繰り返すことで自走力を養うことができたと感じました。
+              また、業界の基礎的な知識や、Linuxを中心にインフラエンジニアとしての知識を学びました。
+              将来インフラエンジにとして活躍する為に知識以外の必要な力も身に付きました。
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <!-- <div class="row d-flex justify-content-center fadeIn">
+      <div class="c3-item col-8 col-md-4" id="c3-item-1">
+        <div class="c3-img">
+          <img src="img/main/nagase-img.jpg" width="100%" alt="">
+        </div>
+        <div class="c3-text">
+          <input id="trigger1" class="grad-trigger" type="checkbox">
+          <label class="grad-btn" for="trigger1"></label>
+          <div class="grad-item">
+            未経験からの研修で不安しかなかったですが、
+            講師の方が丁寧に分かるまで対応して下さり最後までやりきることが出来ました。
+            PCのこともよく分からなかった自分が構築を出来た時は達成感がありました。
+            中でもLinuxのコマンドは研修で何度も練習したので、
+            現場でスムーズに使うことができました。
+            おかげで他の方より早く次の作業へ移れました。
+          </div>
+        </div>
+      </div>
+      <div class="c3-item col-8 col-md-4" id="c3-item-3">
+        <div class="c3-img">
+          <img src="img/main/sekiguti_202105.jpg" width="100%" alt="">
+        </div>
+        <div class="c3-text">
+          <input id="trigger3" class="grad-trigger-2" type="checkbox">
+          <label class="grad-btn-2" for="trigger3"></label>
+          <div class="grad-item-2"> 
+            ■研修で学んだこと
+            研修ではITインフラがどのような業種、業界なのかという基礎的な知識から、
+            ITインフラ業界で幅広く使用されているLinuxの使用方法、構築方法について学びました。
+            <br>■現場で学んだ事
+              現場に活かせたことはわからないことへの対応の仕方です。
+              基本的なことかもしれませんが、研修ではわからないことはまず調べる。
+              それでもわからない場合は先輩スタッフに相談できる環境でした。
+              現場では研修以上にわからないことが多い為、
+              研修の環境のおかげでわからないことへの対応がスムーズに行えていると思いました。
+            </br>
+          </div>
+        </div>
+      </div>
+      <div class="c3-item col-8 col-md-4" id="c3-item-2">
+        <div class="c3-img">
+          <img src="img/main/oogaki_sample2.jpg" width="100%" alt="">
+        </div>
+        <div class="c3-text">
+          <input id="trigger2" class="grad-trigger-1" type="checkbox">
+          <label class="grad-btn-1" for="trigger2"></label>
+          <div class="grad-item-1">
+            完全未経験で研修をスタートしました。
+            研修を通して一番成長できたと思うことは「自走力」でした。
+            講師の方とのやり取りを通して、効果的な質問の仕方や、「わからない」
+            に対しての問題解決の仕方などを繰り返すことで自走力を養うことができたと感じました。
+            また、業界の基礎的な知識や、Linuxを中心にインフラエンジニアとしての知識を学びました。
+            将来インフラエンジにとして活躍する為に知識以外の必要な力も身に付きました。
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </div>
+  <!-- <div class="btn-box text-center" role="button" aria-label="Basic example">
+    <a class="btn btn-lg" href="#contact-info">無 料 相 談 は こ ち ら  ▼</a>
+  </div> -->
+  <div class="container-fluid" id="btn-aria">
+    <div class="ba-title text-center">
+      <h3>まずは無料相談でお気軽にご相談ください！</h3>
+      <p>無料相談はお客様の要望に寄り添って親身に話を進めます。</p>
+      <p>ご質問やお問い合わせも下記より承っております。</p>
+    </div>
+    <div class="btn-box text-center" id="btn-ariabox" role="button" aria-label="Basic example">
+      <a class="btn btn-lg" href="#contact-info">無 料 相 談 は こ ち ら  <i class="far fa-envelope fa-lg"></i></a>
+    </div>
+  </div>
+  <!-- --------------------------content-4------------------------------------------------ -->
+  <div class="container-fluid" id="content-4">
+    <div class="c4-title text-center mb-3">
+      <h2>― 料金・コース ―</h2>
+    </div>
+    <div class="c4-topic text-center fadeIn">
+      <p>ITインフラは、電気、ガス、水道のように、<br class="br-sp">生活に欠かせない要素の一部です。</p>
+      <p>そのため、需要が安定しており、<br class="br-sp">不況に強い仕事です。</p>
+      <p>インフラエンジニアはすべてのサービスの<br class="br-sp">基盤となる、非常にやりがいのある仕事です。</p>
+      <p>やる気さえあれば未経験でも十分チャレンジできます。</p>
+      <p>新たな挑戦で人生を変えましょう!!</p> 
+    </div>
+    <div class="c4-items row d-flex justify-content-center fadeIn">
+      <div class="c4-item-1 col-10 col-md-5">
+        <div class="c4-item-title">
+          <h2>EXPERT PLAN</h2>
+          <span>エキスパートプラン</span>
+        </div>
+        <div class="c4-text text-center">
+          <p>【未経験】働きながら短期集中!!</p>
+          <h3>￥<b><span>150,000</span></b>/月</h3>
+          <p>学習期間：3ヶ月（1ヶ月想定40時間）</p>
+        </div>
+      </div>
+      <div class="c4-item-2 col-10 col-md-5 ">
+        <div class="c4-item-title">
+          <h2>STANDARD PLAN</h2>
+          <span>スタンダードプラン</span>
+        </div>
+        <div class="c4-text text-center">
+          <p>【未経験】働きながら自分のペースで。</p>
+          <h3>￥<b><span>120,000</span></b>/月</h3>
+          <p>学習期間：6ヶ月（1ヶ月想定25時間）</p>
+        </div>
+      </div>
+      <p>※また、経験者の方向けのプランもございますので、<br class="br-sp">是非お問い合わせください。</p>
+    </div>
+    <div class="btn-box text-center" role="button" aria-label="Basic example">
+      <a class="btn btn-lg" href="#contact-info">無 料 相 談 は こ ち ら  <i class="far fa-envelope fa-lg"></i></a>
+    </div>
+  <!-- -------------------article---------------------------------- -->
+    <div class="container-fluid fadeIn" id="article">
+      <div class="art-title text-center mb-3">
+        <h2>― サポート内容 ―</h2>
+      </div>
+      <div class="art-text text-center" id="article-item-box">
+        <div class="article-item text-center">
+          <ul class="article-item-line">
+            <li>
+              <img src="img/main/op_icon_img5.png" width="15%" alt="">
+              <span class="marker1">転職・フリーランスなど可能性を拡げるサポート</span>
+            </li>
+            <li>
+              <img src="img/main/op_icon_img4.png" width="15%" alt="">
+              <span class="marker1">メインの講義内容に加え面談練習サポート</span>
+            </li>
+            <li>
+              <img src="img/main/op_icon_img7.png" width="15%" alt="">
+              <span class="marker1">エンジニア業界の仕組みなどの話が聞ける</span>
+            </li>
+            <li>
+              <img src="img/main/op_icon_img3.png" width="15%" alt="">
+              <span class="marker1">現役エンジニアからの現場で通用するアドバイス</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  <!-- -------------------FAQ--------------------------------- -->
+    <div class="container fadeIn" id="FAQ">
+      <div class="FAQ-title text-center">
+        <h2>Q&A</h2>
+      </div>
+      <div class="accordion" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn-2 btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Q.未経験からでも大丈夫ですか。 ▼
+              </button>
+            </h5>
+          </div>
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+              <p>A.はい、全く問題ございません。</p>
+              <p>&emsp;IT経験を問わず、ゼロからのエンジニア教育を得意としており、</p>
+              <p>&emsp;弊社カリキュラムを卒業をした未経験メンバーもエンジニアとして多数活躍中です。</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+              <button class="btn-2 btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Q.経験者でも大丈夫か ▼
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
+              <p>A.大丈夫です。経験者の方に合わせたカリキュラムの用意がございます。</p>
+              <p>&emsp;大手ITスクール卒業生なども多数受講しています。</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+              <button class="btn-2 btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Q.研修期間について ▼
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+              <p>A.2ヶ月～６ヶ月の間でのプランをご用意しております。</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingSix">
+            <h5 class="mb-0">
+              <button class="btn-2 btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                Q.講義スタイルは？ ▼
+              </button>
+            </h5>
+          </div>
+          <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+            <div class="card-body">
+              <p>A.自走力を養うことを目的としている為、自習するスタイルで行っております。</p>
+              <p>&emsp;オンライン、オフラインともに講師がいますので、いつでも質問できます。</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingFour">
+            <h5 class="mb-0">
+              <button class="btn-2 btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Q.必要なPCのスペックは？ ▼
+              </button>
+            </h5>
+          </div>
+          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+            <div class="card-body">
+              <p>A.弊社で使用しているPCのスペックは</p>
+              <p>（CPUコアI5）相当メモリ8GB、HDD256程度</p>
+              <p>&emsp;ですので同等のスペックであれば問題ございません。</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingSeven">
+            <h5 class="mb-0">
+              <button class="btn-2 btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                Q.質問回数に上限はありますか？ ▼
+              </button>
+            </h5>
+          </div>
+          <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+            <div class="card-body">
+              <p>A.特にございません。いくらでもご質問いただけます。</p>
+              <p>&emsp;さらに現場で通用する質問ができるように教育を行なっております。</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingEight">
+            <h5 class="mb-0">
+              <button class="btn-2 btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                Q.受講開始までの流れ ▼
+              </button>
+            </h5>
+          </div>
+          <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
+            <div class="card-body">
+              <p>A.お問い合わせ → 面談 → 申し込み → 契約 → 受講開始 となっております。</p>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="card">
+          <div class="card-header" id="headingNine">
+            <h5 class="mb-0">
+              <button class="btn-2 btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                Q.支払方法はどのようなものがありますか？
+              </button>
+            </h5>
+          </div>
+          <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
+            <div class="card-body">
+              <p>A.お支払い方法はhogehoge、hogehoge、がお使いいただけます。</p>
+              <p></p>
+              <p></p>
+            </div>
+          </div>
+        </div> -->
+        <div class="card">
+          <div class="card-header" id="headingTen">
+            <h5 class="mb-0">
+              <button class="btn-2 btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                Q.返金制度はありますか？ ▼
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordionExample">
+            <div class="card-body">
+              <p>A.契約日から8日以内であれば受講料の全額返金をいたします。</p>
+              <p>※返金手数料はご負担いただきます。</p>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="card">
+          <div class="card-header" id="headingFive">
+            <h5 class="mb-0">
+              <button class="btn-2 btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                Q.パソコンのレンタルは可能ですか？
+              </button>
+            </h5>
+          </div>
+          <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+            <div class="card-body">
+              <p>A.はい、保証金ありでレンタル可能（7,800円/月）です</p> 
+            </div>
+          </div>
+        </div> -->
+      </div>
+      </div>
+    </div>
+    <!-- <div class="btn-box text-center" role="button" aria-label="Basic example">
+      <a class="btn btn-lg" href="#contact-info">無 料 相 談 は こ ち ら  ▼</a>
+    </div> -->
+    <div class="container-fluid" id="btn-aria">
+      <div class="ba-title text-center">
+        <h3>まずは無料相談でお気軽にご相談ください！</h3>
+        <p>無料相談はお客様の要望に寄り添って親身に話を進めます。</p>
+        <p>ご質問やお問い合わせも下記より承っております。</p>
+      </div>
+      <div class="btn-box text-center" id="btn-ariabox" role="button" aria-label="Basic example">
+        <a class="btn btn-lg" href="#contact-info">無 料 相 談 は こ ち ら  <i class="far fa-envelope fa-lg"></i></a>
+      </div>
+    </div>
+<!-- --------------------------content-5------------------------------------------------ -->
+    <div class="container" id="content-5">
+      <!-- <div class="blog">
+        <div class="blog-title text-center">
+          <h2>ブログ</h2>
+        </div>
+        <div class="b-items">
+          <ul>
+            <li>
+              <a href="#">
+                <div class="b-item">
+                  <img src="" alt="">
+                </div>
+                <div class="outline">
+                  <div class="b-title"></div>
+                  <div class="b-text"></div>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <div class="to_list text-center"><a href="#">ブログ一覧</a></div>
+        </div>
+      </div> -->
+      <div class="container fadeIn" id="box-1">
+        <div class="b1-title text-center">
+          <h2>― 講義風景 ―</h2>
+        </div>
+        <ul class="slick-slider">
+          <li><img alt="画像1" src="img/main/DSC_4755-min.jpeg" /></li>
+          <li><img alt="画像2" src="img/main/DSC_4837-min.jpeg" /></li>
+          <li><img alt="画像3" src="img/main/DSC_4877-min.jpeg" /></li>
+          <li><img alt="画像4" src="img/main/DSC_4780-min.jpg" /></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container-fluid qupon fadeIn">
+      <div class="q-title text-center">
+        <h2>SBGYMクーポン</h2>
+      </div>
+      <div class="container q-item1 text-center">
+        <p>弊社では、システムエンジニアの健康維持の観点から、パーソナルトレーニングジム SBGYMを運営しております。</p>
+        <p>個人・法人のお客様問わず、健康維持・筋力アップ・ダイエットなどのサポートも徹底しております。</p>
+      </div>
+      <div class="container q-item2">
+        <div class="row d-flex justify-content-center">
+          <div class="q-img d-flex col-11 col-md-6">
+            <img src="img/main/SBGYM-img.jpg" width="50%"  alt="">
+            <img src="img/main/SBGYM-img2.jpg" width="50%"  alt="">
+          </div>
+          <div class="q-text text-center col-11 col-md-6">
+            <p><span class="marker1">このホームページを見たとお伝えいただければ</span></p>
+            <p class="p1"><span class="marker1">入会金無料キャンペーン実施中！</span></p>
+            <p>▼ 詳細はこちら ▼</p>
+            <a href="https://silver---back.jp/" class="btn-a btn-ver2">SILBER BACK GYM</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  <!-- ------------------access---------------------------- -->
+      <div class="container text-center fadeIn" id="access">
+        <div class="a-title">
+          <h2>― アクセス ―</h2>
+        </div>
+        <div class="map text-center">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.243708680611!2d139.7539534876972!3d35.72022442239184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188dca5e479f2b%3A0x287b1eaab6f1f2ad!2z44CSMTEzLTAwMDEg5p2x5Lqs6YO95paH5Lqs5Yy655m95bGx77yR5LiB55uu77yS77yWIOODleOCo-ODq-ODu-ODkeODvOOCryDnmb3lsbHjg5Ljg6vjgro!5e0!3m2!1sja!2sjp!4v1622449741936!5m2!1sja!2sjp" width="100%" height="500px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="a-info">
+          <table class="table table-bordered">
+            <tbody>
+              <tr>
+                <th scope="row">住所</th>
+                <td>〒113-0001<br>
+                東京都文京区白山１丁目２６−１７ フィル・パーク 白山ヒルズ 6F</td>
+              </tr>
+              <tr>
+                <th scope="row">電話番号</th>
+                <td>03-5615-9696</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+      <!-- コンタクトフォーム 追加 -->
+      <div class="container-fluid mb-5 fadeIn" id="contact-info">
+        <div class="info-titl text-center">
+          <h2><span>▼</span> お問い合わせ <span>▼</span></h2>
+        </div>    
+        <?php echo do_shortcode('[contact-form-7 id="5" title="コンタクトフォーム 1"]'); ?>
+      </div>
+      <!-- コンタクトフォーム -->
+
+    <!-- フッター -->
+    <footer>
+      <div class="container-fluid d-flex justify-content-between" id="f-items">
+        <div class="footer-nav">
+          <div class="f-title text-center">
+            <a href="#">
+              <h2>NIC</h2>
+              <h3>~NeOS IT College~</h3>
+            </a> 
+          </div>
+        </div>
+        <div class="f-info d-flex text-left">
+          <ul class="f-info-1">
+            <li><a href="">運営会社：株式会社NeOS</a></li>
+            <li><a href="https://silver---back.jp/">SILBER BACK GYM</a></li>
+            <li>NIC NeOS IT College</li>
+          <!-- <ul class="f-info-3">
+            <li>住所</li>
+            <li>東京都文京区白山1-26-17</li>
+            <li> フィル・パーク白山ヒルズ6F</li>
+          </ul>
+          <ul class="f-info-4">
+            <li>電話番号</li>
+            <li>TEL: 03-0000-0000</li>
+          </ul> -->
+            <li><a href="private2.html">プライバシーポリシー</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- jquery読み込み -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <!-- bootstrap js読み込み -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="slick/slick.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script>
+      let contents = document.querySelectorAll('.fadeIn');
+      let windowIn = window.innerHeight;
+      let nowPosition;
+      let myClassName = 'scrollin';
+      for (var i = 0; contents.length > i; i++) {
+        let content = contents[i];
+        let contentPosition = content.getBoundingClientRect().top;
+        window.addEventListener('scroll', function () {
+          nowPosition = window.pageYOffset;
+          if (content.classList.contains(myClassName) === false) {
+            if (windowIn + nowPosition > contentPosition + (windowIn / 5)) {
+              content.classList.add(myClassName);
+            }
+          }
+        },false)
+      }
+    </script>
+  <?php wp_footer(); ?> <!--追加 -->
+</div>
+</body>
+</html>
