@@ -11,7 +11,7 @@ if( !empty($_POST['btn_confirm']) ) {
 <h1>新規登録</h1>
 <?php if( $page_flag === 1 ): ?>
 <h2>入力内容確認画面</h2>
-  <form action="?" method="post">
+  <form action="./register.php" method="post">
   <div>
       <label>名前：<label>
       <p><?php echo $_POST['name']; ?></p>
@@ -34,7 +34,7 @@ if( !empty($_POST['btn_confirm']) ) {
 <?php else: ?>
   
   <!-- 処理を行う宛先を指定 -->
-  <form action="" method="post">
+  <form action="./register.php" method="post">
   <div>
       <label>名前：<label>
       <input type="text" name="name" required>

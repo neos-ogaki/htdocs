@@ -6,13 +6,13 @@
 RewriteEngine On
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 RewriteBase /
-RewriteRule ^index\.php$ - [L]
+#RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 #RewriteRule . /index.php [L]
 RewriteRule . /wp/index.php [L]
-AddType application/x-httpd-php .php .html
-AddHandler application/x-httpd-php .php .html
+#AddType application/x-httpd-php .php .html
+#AddHandler application/x-httpd-php .php .html
 </IfModule>
 
 # END WordPress

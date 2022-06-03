@@ -6,7 +6,7 @@ $name = $_POST['name'];
 $address = $_POST['address'];
 $pass = password_hash($_POST['pass'], PASSWORD_DEFAULT);
 // $dsn = "mysql:dbname=localhost3306; dbname=mysql; charset=utf8mb4";
-$dsn = "mysql:host=localhost;dbname=mysql; charset=utf8mb4";
+$dsn = "mysql:host=localhost;dbname=mysql; charset=utf8";
 $username = "root";
 $password = "root";
 try {

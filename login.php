@@ -13,7 +13,7 @@ session_start();
 //     $msg = $e->getMessage();
 // }
 
-$dsn = "mysql:host=localhost;dbname=mysql; charset=utf8mb4";
+$dsn = "mysql:host=localhost;dbname=mysql; charset=utf8";
 $username = "root";
 $password = "root";
 try {
@@ -34,23 +34,13 @@ $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':name', $name);
 $stmt->execute();
 $member = $stmt->fetch();
-echo $_POST['pass'];
-print_r($member);
-//指定したハッシュがパスワードにマッチしているかチェック
-// これをどうやって作ったのかは、password_hash() の例を参照ください
 
-if (password_verify($_POST['pass'], $member['pass'])) {
-    echo 'Password is valid!';
-} else {
-    echo 'Invalid password.';
-    echo  $member['pass'];
-}
 if (password_verify($_POST['pass'], $member['pass'])) {
     //DBのユーザー情報をセッションに保存
     $_SESSION['id'] = $member['id'];
     $_SESSION['name'] = $member['name'];
     $msg = 'ログインしました。';
-    $link = '<a href="./reserve.html">ホーム</a>';
+    $link = '<a href="/reserve.html">ホーム</a>';
 } else {
     $msg = 'メールアドレスもしくはパスワードが間違っています。';
     $link = '<a href="login_form.php">戻る</a>';
