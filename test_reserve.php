@@ -1,16 +1,6 @@
 <?php require('./wp/wp-load.php'); ?>
 <link rel="stylesheet" href="./css/style-reserve.CSS">
 <?php session_start(); ?>
-<?php
-if(isset($_SESSION['name'])){
-          echo "ようこそ、".$_SESSION['name']."さん！";
-          print_r( $_SESSION );
-
-        }else{
-          header('Location:login_form.php');
-          exit;
-        }
-?>
 <?php wp_head(); ?>
 <div class="wrap">
   <div class="title">

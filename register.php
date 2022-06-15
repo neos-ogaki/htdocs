@@ -34,7 +34,7 @@ $member = $stmt->fetch();
 // print_r($pass);
 
 if ($member['address'] === $address) {
-    $msg = '同じメールアドレスが存在します。';
+    $msg = '同じメールアドレスが存在します。登録を最初からやり直してください。';
     $link = '<a href="signup.php">戻る</a>';
 } else {
     //登録されていなければinsert 
@@ -44,7 +44,7 @@ if ($member['address'] === $address) {
     $stmt->bindValue(':address', $address);
     $stmt->bindValue(':pass', $pass);
     $stmt->execute();
-    $msg = '会員登録が完了しました';
+    $msg = '登録が完了しました';
     $link = '<a href="login_form.php">ログインページ</a>';
 }
 ?>
