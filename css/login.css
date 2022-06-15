@@ -49,13 +49,24 @@ input[type="submit"]{
     border-bottom: solid 5px #3cb371;
 }
 
+input[type="submit"]:disabled{
+    display: block;
+    width: 250px;
+    margin: 0 auto;
+    text-align: center;
+    color: #ffffff;
+    background-color: rgb(230,224,224);
+    border-bottom: solid 5px #333232;
+}
+
 .form-box { 
   width: 80%;
   margin: 0 auto;
 }
 
-.form_list label {
+.form-list label {
   margin-right: 15px;
+  font-weight: 800;
 }
 
 .coment {
@@ -80,3 +91,7 @@ input[type="submit"]{
   font-size: 1.3rem;
 }
 
+span {
+  color: red;
+  font-weight: 600;
+}

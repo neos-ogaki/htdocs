@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./css/login.CSS">
+<link rel="stylesheet" href="./css/login.css">
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
