@@ -1,12 +1,9 @@
 <?php
-session_start();
-//DB接続
-$tfid = $_POST['id'];
+
 $user = $_SESSION['name'];
 $dsn = "mysql:host=localhost;dbname=my-wp; charset=utf8";
 $db_user = "root";
 $db_pswd = "root";
-$sql = "DELETE FROM `wp_mtssb_booking` WHERE user_name=:name and `booking_time`=:tfid"; 
 
 try {
     //echo "接続成功\n"; 
@@ -22,12 +19,27 @@ try {
 }
 
 //DBユーザー予約日程取得
+$get_sql = "SELECT `client` FROM `wp_mtssb_booking` WHERE booking_time=:tfid" ; 
 $stmt = $pdo->prepare($sql);
-$stmt->bindValue(':name', $user);
 $stmt->bindValue(':tfid', $tfid);
 $stmt->execute();
+$info = $stmt->fetchAll();
 
+$client_list = [];
+foreach($info as $i) {
+  array_push($client_list, $i['client']);
+}
 
-<h2>予約を取り消しました</h2>
-<a href="test_reserve.php">ホーム</a>
+foreach ($client_list as $info_line) {
+  if ($user == explode('"', $info_line)[7]) {
+    $send_sql = "DELETE FROM `wp_mtssb_booking` WHERE booking_time=:tfid and client=:line" ; 
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindValue(':tfid', $tfid);
+    $stmt->bindValue(':line', $info_line);
+    $stmt->execute();
+    break;
+  }
+}
+
 ?>
+

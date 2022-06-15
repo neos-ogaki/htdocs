@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./css/login.CSS">
+<link rel="stylesheet" href="./css/login.css">
 <?php
 // 変数の初期化
 $page_flag = 0;
@@ -36,25 +36,25 @@ if( !empty($_POST['btn_confirm'])) {
   
     <!-- 処理を行う宛先を指定 -->
   <div class="form-box">
-    <form action="./register.php" method="post">
-    <div class="form_list">
-        <label>名前</label><span id="result_name">aaaaaa</span>
-        <input type="text" name="name" required>
-    
-        <label>メールアドレス</label>
-        <input type="text" name="address" required>
-    
-        <label>パスワード</label>
-        <input type="password" name="pass" required>
-
-        <!-- <label>再確認用パスワード<label>
-        <input type="password" name="pass" required> -->
-    </div>
-    <input type="submit" name="btn_confirm" value="入力内容を確認する">
-    </form>
+  <form action="./register.php" method="post" id="form">
+  <div>
+      <label>名前：</label><span id="name-result"></span>
+      <input id="name" type="text" name="name" required>
+  </div>
+  <div>
+      <label>メールアドレス：</label><span id="address-result"></span>
+      <input id="address" type="text" name="address" required>
+  </div>
+  <div>
+      <label>パスワード：</label><span id="pass-result"></span>
+      <input id="pass" type="password" name="pass" required>
+  </div>
+  <input id="submit" type="submit" name="btn_confirm" value="入力内容を確認する" disabled>
+  </form>
   <?php endif; ?>
   <div class="coment">
     <p>すでに登録済みの方は<a href="./login_form.php">こちら</a></p>
   </div>
   </div>
 </div>
+<script src="./js/validation.js"></script>

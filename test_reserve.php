@@ -38,7 +38,7 @@ $user = $_SESSION['name'];
 $dsn = "mysql:host=localhost;dbname=my-wp; charset=utf8";
 $db_user = "root";
 $db_pswd = "root";
-$sql = "SELECT `booking_time` FROM `wp_mtssb_booking` WHERE user_name=:name" ; 
+$sql = "SELECT `booking_time` FROM `wp_mtssb_booking` WHERE user_name=:name" ; // change user_name to client array
 
 try {
     //echo "接続成功\n"; 
