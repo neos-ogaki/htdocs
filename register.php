@@ -1,6 +1,9 @@
+<link rel="stylesheet" href="./css/login.CSS">
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
+// ↓エラー文を表示させるための記載
+// error_reporting(E_ALL);
+// ini_set('display_errors', '1');
+
 // //フォームからの値をそれぞれ変数に代入
 $name = $_POST['name'];
 $address = $_POST['address'];
@@ -10,7 +13,7 @@ $dsn = "mysql:host=localhost;dbname=mysql; charset=utf8";
 $username = "root";
 $password = "root";
 try {
-    echo "接続成功\n";
+    // echo "接続成功\n";
     $pdo = new PDO($dsn, $username, $password,
     [
       PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
@@ -28,7 +31,7 @@ $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':address', $address);
 $stmt->execute();
 $member = $stmt->fetch();
-print_r($pass);
+// print_r($pass);
 
 if ($member['address'] === $address) {
     $msg = '同じメールアドレスが存在します。';
@@ -46,5 +49,9 @@ if ($member['address'] === $address) {
 }
 ?>
 
-<h1><?php echo $msg; ?></h1><!--メッセージの出力-->
-<?php echo $link; ?>
+<div class="message">
+  <h2><?php echo $msg; ?></h2><!--メッセージの出力-->
+</div>
+<div class="return">
+  <?php echo $link; ?>
+</div>

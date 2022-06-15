@@ -26,6 +26,8 @@
 
 // ** MySQL 設定 - この情報はホスティング先から入手してください。 ** //
 /** WordPress のためのデータベース名 */
+define('WP_CACHE', true);
+define( 'WPCACHEHOME', 'C:\MAMP\htdocs\wp\wp-content\plugins\wp-super-cache/' );
 define( 'DB_NAME', 'my-wp' );
 
 /** MySQL データベースのユーザー名 */

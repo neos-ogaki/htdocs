@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="./css/login.CSS">
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
@@ -17,7 +18,7 @@ $dsn = "mysql:host=localhost;dbname=mysql; charset=utf8";
 $username = "root";
 $password = "root";
 try {
-    echo "接続成功\n";
+    // echo "接続成功\n";
     $pdo = new PDO($dsn, $username, $password,
     [
       PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
@@ -39,13 +40,17 @@ if (password_verify($_POST['pass'], $member['pass'])) {
     //DBのユーザー情報をセッションに保存
     $_SESSION['id'] = $member['id'];
     $_SESSION['name'] = $member['name'];
+    $_SESSION['adress'] = $member['address'];
     $msg = 'ログインしました。';
-    $link = '<a href="/reserve.html">ホーム</a>';
+    $link = '<a href="/test_reserve.php">ホーム</a>';
 } else {
-    $msg = 'メールアドレスもしくはパスワードが間違っています。';
+    $msg = '名前もしくはパスワードが間違っています。';
     $link = '<a href="login_form.php">戻る</a>';
 }
 ?>
-
-<h1><?php echo $msg; ?></h1>
-<?php echo $link; ?>
+<div class="message">
+  <h2><?php echo $msg; ?></h2>
+</div>
+<div class="return">
+  <?php echo $link; ?>
+</div>

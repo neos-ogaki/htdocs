@@ -13,17 +13,17 @@ function connect_db() {
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
       ]
     );
-    return $pdo
+    return $pdo;
   } catch (PDOException $e) {
     echo $e;
   }
 }
 
 function get_tf_list() {
-  const SQL = "SELECT * FROM wp_mtssb_booking WHERE booking_time = :tfid and user_name = :name" ; 
+  $sql = "SELECT * FROM wp_mtssb_booking WHERE booking_time = :tfid and user_name = :name" ; 
 
   $database = connect_db();
-  $stmt = $database->prepare(SQL);
+  $stmt = $database->prepare($sql);
   $stmt->bindValue(':bookid', BOOKID);
   $stmt->bindValue(':name', USER);
   $stmt->execute();
@@ -33,6 +33,7 @@ function get_tf_list() {
 }
 
 function override_html() {
+  echo <<<EOM
   <script>
     // php -> json -> js
     var four_room_elements = document.getElementsByClassName('booking-timelink');
@@ -47,6 +48,7 @@ function override_html() {
       new_element = target.replaceWith(p)
     }
   </script>
+  EOM;
 }
 
 ?>

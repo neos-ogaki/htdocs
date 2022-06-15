@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+* {
+font-family: '游ゴシック','ヒラギノ角ゴ ProN W3','メイリオ', 'Meiryo','ＭＳ ゴシック','Hiragino Kaku Gothic ProN',sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+/* ------------共通------------- */
+
+.main {
+  width: 60%;
+  /* height: 300px; */
+  margin: 0 auto;
+  margin-top: 5%;
+  /* text-align: center; */
+  background-color: rgb(202, 233, 233);
+}
+
+.main h2 {
+  font-size: 2rem;
+  text-align: center;
+  background-color: white;
+}
+
+input {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  color: #495057;
+  background-color: #ffffff;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 25px;
+}
+
+input[type="submit"]{
+    display: block;
+    width: 250px;
+    margin: 0 auto;
+    text-align: center;
+    color: #ffffff;
+    background-color: #45cc82;
+    border-bottom: solid 5px #3cb371;
+}
+
+.form-box { 
+  width: 80%;
+  margin: 0 auto;
+}
+
+.form_list label {
+  margin-right: 15px;
+}
+
+.coment {
+  padding: 3%;
+  text-align: center;
+}
+
+.message {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 10%;
+  background-color: rgb(157, 241, 241);
+  border: 1px solid rgb(167, 163, 163);
+}
+
+.return {
+  width: 60%;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
