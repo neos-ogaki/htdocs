@@ -5,6 +5,7 @@
 <div class="wrap">
   <div class="title">
       <h2>教室座席予約</h2>
+      <p>ようこそ<?php echo $_SESSION['name'] ?>さん</p>
   </div>
   <h1><?php echo $msg; ?></h1>
       <?php echo $link; ?>
@@ -26,7 +27,7 @@
     </div>
     <div class="content-3">
       <h4>2.キャンセルについて</h4>
-      <p>キャンセルはメール又は、slackでご連絡ください</p>
+      <p>キャンセルはメール又は、slackでご連絡ください。</p>
       <p>キャンセルはの場合は原則30分前までに行なってください。</p>
     </div>
   </div>
@@ -38,7 +39,6 @@ $user = $_SESSION['name'];
 $dsn = "mysql:host=localhost;dbname=my-wp; charset=utf8";
 $db_user = "root";
 $db_pswd = "root";
-$sql = "SELECT `booking_time` FROM `wp_mtssb_booking` WHERE user_name=:name" ; // change user_name to client array
 
 try {
     //echo "接続成功\n"; 
@@ -54,8 +54,9 @@ try {
 }
 
 //DBユーザー予約日程取得
+$sql = "SELECT `booking_time` FROM `wp_mtssb_booking` WHERE `client` LIKE :name" ; 
 $stmt = $pdo->prepare($sql);
-$stmt->bindValue(':name', $user);
+$stmt->bindValue(':name', "%".$user."%");
 $stmt->execute();
 $info = $stmt->fetchAll();
 
@@ -83,8 +84,8 @@ echo <<<EOM
         target_id = elements[j].getAttribute('href').split('=').pop();
         if (duplicatedArr.includes(target_id)) {
             elements[j].parentElement.innerHTML = '\
-                <form action="cancel.php" method="post">\
-                <input type="submit" name="id" value="' + target_id + '">\
+                <form action="cancel.php" method="get">\
+                <button type="sumbit" name="tfid" value="' + target_id + '">予約取り消し</button>\
                 </form>';
 
         }

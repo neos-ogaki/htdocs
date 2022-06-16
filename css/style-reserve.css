@@ -16,18 +16,24 @@ html {
 
 .title {
   padding: 1%;
-}
-
-.title h2 {
   background-color: rgb(192, 245, 245);
-  height: 10vh;
-  padding: 20px;
-  font-weight: 700;
-  letter-spacing: 2px;
   background-image: url(../img/lp/logo_NeOS_NIC.png);
   background-size: 8%;
   background-repeat: no-repeat;
   background-position: 95% 0%;
+}
+
+.title h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 2px;
+}
+
+.title p {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 
 .text-box {

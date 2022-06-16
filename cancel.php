@@ -1,5 +1,7 @@
+<link rel="stylesheet" href="./css/login.css">
+<?php session_start(); ?>
 <?php
-
+$tfid = $_GET['tfid'];
 $user = $_SESSION['name'];
 $dsn = "mysql:host=localhost;dbname=my-wp; charset=utf8";
 $db_user = "root";
@@ -20,7 +22,7 @@ try {
 
 //DBユーザー予約日程取得
 $get_sql = "SELECT `client` FROM `wp_mtssb_booking` WHERE booking_time=:tfid" ; 
-$stmt = $pdo->prepare($sql);
+$stmt = $pdo->prepare($get_sql);
 $stmt->bindValue(':tfid', $tfid);
 $stmt->execute();
 $info = $stmt->fetchAll();
@@ -33,13 +35,19 @@ foreach($info as $i) {
 foreach ($client_list as $info_line) {
   if ($user == explode('"', $info_line)[7]) {
     $send_sql = "DELETE FROM `wp_mtssb_booking` WHERE booking_time=:tfid and client=:line" ; 
-    $stmt = $pdo->prepare($sql);
+    $stmt = $pdo->prepare($send_sql);
     $stmt->bindValue(':tfid', $tfid);
     $stmt->bindValue(':line', $info_line);
     $stmt->execute();
     break;
   }
 }
-
 ?>
+
+<div class="message">
+  <h2>予約の取り消しが完了しました</h2><!--メッセージの出力-->
+</div>
+<div class="return">
+  <a href="test_reserve.php">戻る</a>
+</div>
 

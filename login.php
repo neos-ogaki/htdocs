@@ -42,7 +42,7 @@ if (password_verify($_POST['pass'], $member['pass'])) {
     $_SESSION['name'] = $member['name'];
     $_SESSION['adress'] = $member['address'];
     $msg = 'ログインしました。';
-    $link = '<a href="/test_reserve.php">ホーム</a>';
+    $link = '<a href="/reserve.php">ホーム</a>';
 } else {
     $msg = '名前もしくはパスワードが間違っています。';
     $link = '<a href="login_form.php">戻る</a>';
