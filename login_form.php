@@ -34,5 +34,6 @@
 </div>
 <div class="coment">
   <p>新規登録は<a href="./signup.php">こちら</a></p>
+  <p>パスワードをお忘れの方は<a href="./pswd_reset.php">こちら</a></p>
 </div>
 </div>

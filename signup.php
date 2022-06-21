@@ -67,6 +67,12 @@ if( !empty($_POST['btn_confirm'])) {
         <p id="buttonEye" class="fa fa-eye" onclick="pushHideButton()"></p>
       </div>
   </div>
+  <div class="form-list">
+      <label>確認用パスワード：</label><span id="pass-result-check"></span>
+      <div class="box">
+        <input id="pass-check" type="password" name="pass-check" required>
+      </div>
+  </div>
   <input id="submit" type="submit" name="btn_confirm" value="入力内容を確認する" disabled>
   </form>
   <?php endif; ?>
@@ -76,3 +82,9 @@ if( !empty($_POST['btn_confirm'])) {
   </div>
 </div>
 <script src="./js/validation.js"></script>
+<script>
+nameValidation();
+addrValidation();
+passValidation();
+pschkValidation();
+</script>
