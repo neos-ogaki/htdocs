@@ -15,7 +15,7 @@
 
 <?php
 
-public function gen_rand_num($length = 6) {
+function gen_rand_num($length = 6) {
   $max = pow(10, $length) - 1;
   $rand = random_int(0, $max);
   $code = sprintf('%0' .$length. 'd', $rand);
@@ -50,18 +50,18 @@ $stmt->execute();
 $member = $stmt->fetch();
 
 if ($member['address'] === $address) {
-    new_pswd = password_hash(gen_rand_num(), PASSWORD_DEFAULT);
+    $new_pswd = password_hash(gen_rand_num(), PASSWORD_DEFAULT);
     $sql = "UPDATE users SET :pswd WHERE address=:address";
     $stmt = $pdo->prepare($sql);
     $stmt->bindValue(':pswd', $new_paswd);
     $stmt->bindValue(':address', $address);
     $stmt->execute();
-    $msg = '新規パスワードを発行しました。'
+    $msg = '新規パスワードを発行しました。';
     $link = '<a href="login_form.php">ログインページ</a>';
 
     //以下ユーザに新規パスワード通知用メール送付
     echo "something";
-    $to = $address
+    $to = $address;
     $subject = "メールの件名";
     $message = "メールの内容";
     $headers = "From: どこからのメールなのか";

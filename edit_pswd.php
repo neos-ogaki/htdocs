@@ -47,7 +47,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
 $address = $_POST['pass'];
-$name = $_POST['name'];
+$pass = $_POST['pass'];
 require dirname(__FILE__) . '../../xserver_php/dsn.php';
 
 try {
@@ -63,12 +63,13 @@ try {
     echo "接続失敗です" . $msg;
 }
 
-new_pswd = password_hash(gen_rand_num(), PASSWORD_DEFAULT);
+
+$new_pswd = password_hash($pass, PASSWORD_DEFAULT);
 $sql = "UPDATE users SET :pswd WHERE address=:address";
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':pswd', $new_paswd);
 $stmt->bindValue(':name', $name);
 $stmt->execute();
-$msg = '新規パスワードを更新しました。'
+$msg = '新規パスワードを更新しました。';
 $link = '<a href="login_form.php">ログインページ</a>';
 ?>
