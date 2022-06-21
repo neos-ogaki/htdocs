@@ -1,25 +1,15 @@
 <link rel="stylesheet" href="./css/login.css">
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
+// error_reporting(E_ALL);
+// ini_set('display_errors', '1');
 
 session_start();
- $name = $_POST['name'];
-// $dsn = "mysql:host=localhost; 3306; charset=utf8";
-// $username = "root";
-// $password = "root";
-// try {
-//     $dbh = new PDO($dsn, $username, $password);
-// } catch (PDOException $e) {
-//     $msg = $e->getMessage();
-// }
+$name = $_POST['name'];
+require dirname(__FILE__) . '../../xserver_php/dsn.php';
 
-$dsn = "mysql:host=localhost;dbname=mysql; charset=utf8";
-$username = "root";
-$password = "root";
 try {
     // echo "接続成功\n";
-    $pdo = new PDO($dsn, $username, $password,
+    $pdo = new PDO($dsn, $db_user, $db_pswd,
     [
       PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
       PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,

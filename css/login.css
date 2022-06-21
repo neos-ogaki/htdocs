@@ -39,6 +39,25 @@ input {
   margin-bottom: 25px;
 }
 
+.box {
+  display: flex;
+  width: 100%;
+}
+
+#pass {
+  border: none;
+  outline: none;
+  border-radius: 5px 0 0 5px;
+}
+
+#buttonEye {
+  background-color: white;
+  border-radius: 0 5px 5px 0;
+  padding: 12px;
+  margin-top: 5px;
+  margin-bottom: 25px;
+}
+
 input[type="submit"]{
     display: block;
     width: 250px;
@@ -56,7 +75,7 @@ input[type="submit"]:disabled{
     text-align: center;
     color: #ffffff;
     background-color: rgb(230,224,224);
-    border-bottom: solid 5px #333232;
+    border-bottom: solid 3px #a19898;
 }
 
 .form-box { 
@@ -94,4 +113,14 @@ input[type="submit"]:disabled{
 span {
   color: red;
   font-weight: 600;
+}
+
+button[type="button"] {
+  display: block;
+  width: 200px;
+  margin: 10px auto;
+  text-align: center;
+  color: #ffffff;
+  background-color: #3f4743;
+  border: none;
 }

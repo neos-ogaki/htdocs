@@ -1,16 +1,20 @@
 <?php require('./wp/wp-load.php'); ?>
-<link rel="stylesheet" href="./css/style-reserve.CSS">
-<?php session_start(); ?>
+<link rel="stylesheet" href="./css/style-reserve.css">
+<?php 
+session_start(); 
+if(!isset($_SESSION['name'])){
+    header("Location:login_form.php");
+    exit(); 
+}
+?>
 <?php wp_head(); ?>
 <div class="wrap">
   <div class="title">
       <h2>教室座席予約</h2>
       <p>ようこそ<?php echo $_SESSION['name'] ?>さん</p>
   </div>
-  <h1><?php echo $msg; ?></h1>
-      <?php echo $link; ?>
   <div class="top-carender">
-    <?php echo do_shortcode('[monthly_calendar id="12"]'); ?>
+    <?php echo do_shortcode('[monthly_calendar id="60"]'); ?>
   </div>
   
   <div class="text-box">
@@ -23,7 +27,7 @@
       <p>第2部:13時～16時 3h</p>
       <p>第3部:16時～19時 3h</p>
       <p>第4部:19時～22時 4h</p>
-      <p>※赤字で表示されている時間は満席となっております。</p>
+      <p>※グレーで表示されている時間は満席となっております。</p>
     </div>
     <div class="content-3">
       <h4>2.キャンセルについて</h4>
@@ -35,10 +39,8 @@
 
 <?php
 //DB接続
+require dirname(__FILE__) . '../../xserver_php/dsn.php';
 $user = $_SESSION['name'];
-$dsn = "mysql:host=localhost;dbname=my-wp; charset=utf8";
-$db_user = "root";
-$db_pswd = "root";
 
 try {
     //echo "接続成功\n"; 
@@ -66,6 +68,7 @@ foreach($info as $i) {
 }
 $tfid_from_db = json_encode($tfid_from_db);
 
+// 重複予約禁止
 echo <<<EOM
   <script>
     //HTMLよりIDリスト作成
@@ -90,13 +93,6 @@ echo <<<EOM
 
         }
     }
-
-    // document.getElementById('cancel-trigger').addEventListener('click', function() {
-    //     fetch('cancel.php', {
-    //         method: 'POST',
-    //         headers: { 'Content-Type': 'application/json' },
-    //         body: JSON.stringify()
-    // }, false);
   </script>
 EOM;
 ?>

@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./css/login.CSS">
+<link rel="stylesheet" href="./css/login.css">
 <?php
 // ↓エラー文を表示させるための記載
 // error_reporting(E_ALL);
@@ -8,13 +8,11 @@
 $name = $_POST['name'];
 $address = $_POST['address'];
 $pass = password_hash($_POST['pass'], PASSWORD_DEFAULT);
-// $dsn = "mysql:dbname=localhost3306; dbname=mysql; charset=utf8mb4";
-$dsn = "mysql:host=localhost;dbname=mysql; charset=utf8";
-$username = "root";
-$password = "root";
+require dirname(__FILE__) . '../../xserver_php/dsn.php';
+
 try {
     // echo "接続成功\n";
-    $pdo = new PDO($dsn, $username, $password,
+    $pdo = new PDO($dsn, $db_user, $db_pswd,
     [
       PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
       PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,

@@ -3,9 +3,7 @@
 <?php
 $tfid = $_GET['tfid'];
 $user = $_SESSION['name'];
-$dsn = "mysql:host=localhost;dbname=my-wp; charset=utf8";
-$db_user = "root";
-$db_pswd = "root";
+require dirname(__FILE__) . '../../xserver_php/dsn.php';
 
 try {
     //echo "接続成功\n"; 
@@ -48,6 +46,6 @@ foreach ($client_list as $info_line) {
   <h2>予約の取り消しが完了しました</h2><!--メッセージの出力-->
 </div>
 <div class="return">
-  <a href="test_reserve.php">戻る</a>
+  <a href="reserve.php">戻る</a>
 </div>
 

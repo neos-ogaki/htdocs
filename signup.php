@@ -1,4 +1,19 @@
 <link rel="stylesheet" href="./css/login.css">
+<!-- お目目 -->
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+<script>
+  function pushHideButton() {
+      var txtPass = document.getElementById("pass");
+      var btnEye = document.getElementById("buttonEye");
+      if (txtPass.type === "text") {
+        txtPass.type = "password";
+        btnEye.className = "fa fa-eye";
+      } else {
+        txtPass.type = "text";
+        btnEye.className = "fa fa-eye-slash";
+      }
+    }
+</script>
 <?php
 // 変数の初期化
 $page_flag = 0;
@@ -15,7 +30,7 @@ if( !empty($_POST['btn_confirm'])) {
   <h3>入力内容確認画面</h3>
   <div class="form-box">
     <form action="./register.php" method="post">
-    <div class="form_list">
+    <div class="form-list">
         <label>名前</label>
         <p><?php echo $_POST['name']; ?></p>
     
@@ -26,7 +41,7 @@ if( !empty($_POST['btn_confirm'])) {
         <p><?php echo $_POST['pass']; ?></p>
     </div>
     <input type="submit" name="btn_confirm" value="新規登録" formaction="./register.php">
-    <input type="submit" name="btn_back" value="戻る">
+    <button type="button" onclick="history.back()">戻る</button>
     <input type="hidden" name="name" value="<?php echo $_POST['name']; ?>">
     <input type="hidden" name="address" value="<?php echo $_POST['address']; ?>">
     <input type="hidden" name="pass" value="">
@@ -36,18 +51,21 @@ if( !empty($_POST['btn_confirm'])) {
   
     <!-- 処理を行う宛先を指定 -->
   <div class="form-box">
-  <form action="./register.php" method="post" id="form">
-  <div>
+  <form action="?" method="post" id="form">
+  <div class="form-list">
       <label>名前：</label><span id="name-result"></span>
       <input id="name" type="text" name="name" required>
   </div>
-  <div>
+  <div class="form-list">
       <label>メールアドレス：</label><span id="address-result"></span>
-      <input id="address" type="text" name="address" required>
+      <input id="address" type="text" name="address" placeholder="xxxx@gmail.com" required>
   </div>
-  <div>
+  <div class="form-list">
       <label>パスワード：</label><span id="pass-result"></span>
-      <input id="pass" type="password" name="pass" required>
+      <div class="box">
+        <input id="pass" type="password" name="pass" required>
+        <p id="buttonEye" class="fa fa-eye" onclick="pushHideButton()"></p>
+      </div>
   </div>
   <input id="submit" type="submit" name="btn_confirm" value="入力内容を確認する" disabled>
   </form>

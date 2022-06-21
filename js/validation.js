@@ -9,7 +9,8 @@ var targetPass = document.getElementById("pass-result");
 
 var noNumPattern   = /^(?!.*[0-9０-９]+).*$/;
 var noSpacePattern = /^(?!.*[ |　]+).*$/;
-var addrPattern    = /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]+.[A-Za-z0-9]+$/;
+// var addrPattern    = /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]+.[A-Za-z0-9]+$/;
+var addrPattern    = /@gmail.com$/;
 var passPattern    = /^(?=.*?[a-z])(?=.*?\d)(?=.*?[A-Z])(?=.*?[!-\/:-@[-`{-~])[!-~]{8,100}$/i;
 
 function total_validate() {
@@ -33,7 +34,7 @@ inputName.addEventListener("blur", (e) => {
 
 inputAddr.addEventListener("input", (e) => {
   if (!(addrPattern.test(inputAddr.value))) {
-    targetAddr.textContent = "Eメールアドレスの形式ではありません";
+    targetAddr.textContent = "Gメールアドレスの形式ではありません";
     inputSubmit.disabled = true;
   } else {
     targetAddr.textContent = "";
