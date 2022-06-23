@@ -24,7 +24,14 @@
   </div>
   <form action="" method="post">
   <div class="form-list">
-      <label>パスワード：</label><span id="pass-result"></span>
+      <label>旧パスワード(またはリセット時発行パスワード)：</label><span id="pass-result"></span>
+      <div class="box">
+        <input id="pass" type="password" name="pass" required>
+        <p id="buttonEye" class="fa fa-eye" onclick="pushHideButton()"></p>
+      </div>
+  </div>
+  <div class="form-list">
+      <label>新パスワード：</label><span id="pass-result"></span>
       <div class="box">
         <input id="pass" type="password" name="pass" required>
         <p id="buttonEye" class="fa fa-eye" onclick="pushHideButton()"></p>
