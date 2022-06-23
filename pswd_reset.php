@@ -80,7 +80,7 @@ if ($address == "") {
     </form>
   </div>
   <div class="result-box" style="text-align: center;">
-    <p style="color: red; font-size: 1.2rem;"><?php echo $result ?></p>
+    <p style="color: red; font-size: 1.2rem; font-weight: 700;"><?php echo $result ?></p>
     <p><?php echo $link ?></p>
   </div>
 </div>
