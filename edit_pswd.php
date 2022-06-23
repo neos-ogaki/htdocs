@@ -26,7 +26,7 @@
   <div class="form-list">
       <label>旧パスワード(またはリセット時発行パスワード)：</label><span id="pass-result"></span>
       <div class="box">
-        <input id="pass" type="password" name="pass" required>
+        <input id="pass-old" type="password" name="pass-old" required>
         <p id="buttonEye" class="fa fa-eye" onclick="pushHideButton()"></p>
       </div>
   </div>
@@ -59,6 +59,7 @@
 
 $address = $_SESSION['address'];
 $pass = $_POST['pass'];
+$pass_old = $_POST['pass-old'];
 require dirname(__FILE__) . '../../xserver_php/dsn.php';
 
 try {
@@ -73,13 +74,28 @@ try {
     $msg = $e->getMessage();
     echo "接続失敗です" . $msg;
 }
-echo $pass;
-$new_pswd = password_hash($pass, PASSWORD_DEFAULT);
-$sql = "UPDATE users SET pass=:pswd WHERE address=:address";
+
+$sql = "SELECT * FROM users WHERE address = :address";
 $stmt = $pdo->prepare($sql);
-$stmt->bindValue(':pswd', $new_pswd);
 $stmt->bindValue(':address', $address);
 $stmt->execute();
-$msg = '新規パスワードを更新しました。';
-$link = '<a href="login_form.php">ログインページ</a>';
+$member = $stmt->fetch();
+
+if (password_verify($_POST['pass'], $member['pass'])) {
+    $new_pswd = password_hash($pass, PASSWORD_DEFAULT);
+    $sql = "UPDATE users SET pass=:pswd WHERE address=:address";
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindValue(':pswd', $new_pswd);
+    $stmt->bindValue(':address', $address);
+    $stmt->execute();
+    $msg = '新規パスワードを更新しました。';
+    $link = '<a href="login_form.php">ログインページ</a>';
+
+    $msg = '';
+    $link = '';
+
+} else {
+    $msg = '旧パスワードまたはリセット時発行パスワードが間違っています。';
+    $link = '<a href="edit_pswd.php">戻る</a>';
+}
 ?>
