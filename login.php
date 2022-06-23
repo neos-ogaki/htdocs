@@ -30,7 +30,7 @@ if (password_verify($_POST['pass'], $member['pass'])) {
     //DBのユーザー情報をセッションに保存
     $_SESSION['id'] = $member['id'];
     $_SESSION['name'] = $member['name'];
-    $_SESSION['adress'] = $member['address'];
+    $_SESSION['address'] = $member['address'];
     $msg = 'ログインしました。';
     $link = '<a href="/reserve.php">ホーム</a>';
 } else {
