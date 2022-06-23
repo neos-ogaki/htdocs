@@ -12,7 +12,6 @@ if(!isset($_SESSION['name'])){
   <div class="title">
       <h2>教室座席予約</h2>
       <p>ようこそ<?php echo $_SESSION['name'] ?>さん</p>
-      <p>hello<?php echo $_SESSION['address'] ?></p>
   </div>
   <div class="edit-pass">
     <p><a href="/edit_pswd.php">パスワードの変更</a></p>
