@@ -8,6 +8,11 @@ html {
   font-size: 16px;
 }
 
+.edit-pass {
+  text-align: end;
+  margin-right: 3%;
+}
+
 .top-carender {
   width: 80%;
   margin: 0 auto;

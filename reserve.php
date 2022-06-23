@@ -13,6 +13,9 @@ if(!isset($_SESSION['name'])){
       <h2>教室座席予約</h2>
       <p>ようこそ<?php echo $_SESSION['name'] ?>さん</p>
   </div>
+  <div class="edit-pass">
+    <p><a href="/edit_pswd.php">パスワードの変更</a></p>
+  </div>
   <div class="top-carender">
     <?php echo do_shortcode('[monthly_calendar id="60"]'); ?>
   </div>
