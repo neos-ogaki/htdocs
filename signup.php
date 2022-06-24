@@ -54,7 +54,7 @@ if( !empty($_POST['btn_confirm'])) {
   <form action="?" method="post" id="form">
   <div class="form-list">
       <label>名前：</label><span id="name-result"></span>
-      <input id="name" type="text" name="name" required>
+      <input id="name" type="text" name="name" maxlength="16" required>
   </div>
   <div class="form-list">
       <label>メールアドレス：</label><span id="address-result"></span>
@@ -63,7 +63,7 @@ if( !empty($_POST['btn_confirm'])) {
   <div class="form-list">
       <label>パスワード：</label><span id="pass-result"></span>
       <div class="box">
-        <input id="pass" type="password" name="pass" required>
+        <input id="pass" type="password" name="pass" maxlength="16" required>
         <p id="buttonEye" class="fa fa-eye" onclick="pushHideButton()"></p>
       </div>
   </div>
